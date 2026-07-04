@@ -2,10 +2,10 @@ import React, {
   useEffect, useMemo, useReducer,
 } from 'react';
 import { Container } from 'semantic-ui-react';
-import RankingsTable from './RankingsTable';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
 import { rankingsUrl } from '../../../lib/requests/routes.js.erb';
 import ResultsFilter from '../ResultsFilter';
+import RankingsTable from './RankingsTable';
 
 const ActionTypes = {
   SET_EVENT: 'SET_EVENT',

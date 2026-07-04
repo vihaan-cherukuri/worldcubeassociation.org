@@ -1,11 +1,12 @@
+import { DateTime } from 'luxon';
 import React from 'react';
+import { BarLoader } from 'react-spinners';
 import {
   Icon, Popup, Loader, Table, Label, Header, Container, Grid, List, Image, Button,
 } from 'semantic-ui-react';
 
-import { BarLoader } from 'react-spinners';
-import { DateTime } from 'luxon';
 import I18n from '../../lib/i18n';
+import { adminCompetitionUrl, competitionUrl } from '../../lib/requests/routes.js.erb';
 import {
   computeAnnouncementStatus,
   computeReportsAndResultsStatus,
@@ -20,9 +21,8 @@ import {
   startYear,
   timeDifferenceBefore,
 } from '../../lib/utils/competition-table';
-import { countries } from '../../lib/wca-data.js.erb';
-import { adminCompetitionUrl, competitionUrl } from '../../lib/requests/routes.js.erb';
 import { dateRange, toRelativeOptions } from '../../lib/utils/dates';
+import { countries } from '../../lib/wca-data.js.erb';
 import RegionFlag from '../wca/RegionFlag';
 
 function ListViewSection({

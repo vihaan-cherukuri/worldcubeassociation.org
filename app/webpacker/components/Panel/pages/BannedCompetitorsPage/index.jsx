@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Header, Button, Modal } from 'semantic-ui-react';
 import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useLoggedInUserPermissions from '../../../../lib/hooks/useLoggedInUserPermissions';
+import usePagination from '../../../../lib/hooks/usePagination';
 import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../../../lib/wca-data.js.erb';
-import Loading from '../../../Requests/Loading';
 import Errored from '../../../Requests/Errored';
-import BannedCompetitors from './BannedCompetitors';
-import useLoggedInUserPermissions from '../../../../lib/hooks/useLoggedInUserPermissions';
+import Loading from '../../../Requests/Loading';
 import BannedCompetitorForm from './BannedCompetitorForm';
-import usePagination from '../../../../lib/hooks/usePagination';
+import BannedCompetitors from './BannedCompetitors';
 
 export default function BannedCompetitorsPage() {
   const bannedPagination = usePagination(50);

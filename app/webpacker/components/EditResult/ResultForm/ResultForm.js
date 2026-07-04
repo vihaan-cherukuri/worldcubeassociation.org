@@ -1,20 +1,20 @@
+import _ from 'lodash';
 import React, { useState, useEffect, useCallback } from 'react';
 
 import { Button } from 'semantic-ui-react';
 
-import _ from 'lodash';
-import AttemptsForm from './AttemptsForm';
-import PersonForm from './PersonForm';
-import RoundForm from './RoundForm';
-import NewPersonModal from './NewPersonModal';
-import DeleteResultButton from './DeleteResultButton';
-import SaveMessage from './SaveMessage';
-import AfterActionMessage from './AfterActionMessage';
-import useSaveAction from '../../../lib/hooks/useSaveAction';
-import { average, best } from '../../../lib/wca-live/attempts';
 import { shouldComputeAverage, getExpectedSolveCount } from '../../../lib/helpers/results';
+import useSaveAction from '../../../lib/hooks/useSaveAction';
 import { resultUrl, competitionAllResultsUrl, adminFixResultsUrl } from '../../../lib/requests/routes.js.erb';
 import { countries } from '../../../lib/wca-data.js.erb';
+import { average, best } from '../../../lib/wca-live/attempts';
+import AfterActionMessage from './AfterActionMessage';
+import AttemptsForm from './AttemptsForm';
+import DeleteResultButton from './DeleteResultButton';
+import NewPersonModal from './NewPersonModal';
+import PersonForm from './PersonForm';
+import RoundForm from './RoundForm';
+import SaveMessage from './SaveMessage';
 import './ResultForm.scss';
 
 const roundDataFromResult = (result) => ({

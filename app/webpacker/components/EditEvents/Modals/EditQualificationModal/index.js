@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
 import _ from 'lodash';
+import React, { useState } from 'react';
 import { Form, Label } from 'semantic-ui-react';
-import I18n from '../../../../lib/i18n';
-import { events } from '../../../../lib/wca-data.js.erb';
-import { eventQualificationToString } from '../../../../lib/utils/wcif';
-import { useDispatch } from '../../../../lib/providers/StoreProvider';
 import useInputState from '../../../../lib/hooks/useInputState';
+import I18n from '../../../../lib/i18n';
+import { useDispatch } from '../../../../lib/providers/StoreProvider';
+import { eventQualificationToString } from '../../../../lib/utils/wcif';
+import { events } from '../../../../lib/wca-data.js.erb';
 import AttemptResultField from '../../../EditResult/WCALive/AttemptResultField/AttemptResultField';
 import MbldPointsField from '../../../EditResult/WCALive/AttemptResultField/MbldPointsField';
+import UtcDatePicker from '../../../wca/UtcDatePicker';
 import { updateQualification } from '../../store/actions';
 import ButtonActivatedModal from '../ButtonActivatedModal';
-import QualificationType from './QualificationTypeInput';
 import QualificationResultType from './QualificationResultTypeInput';
-import UtcDatePicker from '../../../wca/UtcDatePicker';
+import QualificationType from './QualificationTypeInput';
 
 /**
  *

@@ -1,8 +1,8 @@
 import React from 'react';
 import I18n from '../../../lib/i18n';
-import { InputString } from '../../wca/FormBuilder/input/FormInputs';
 import { useStore } from '../../../lib/providers/StoreProvider';
 import { competitionMaxShortNameLength } from '../../../lib/wca-data.js.erb';
+import { InputString } from '../../wca/FormBuilder/input/FormInputs';
 import { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
 
 export default function NameDetails() {

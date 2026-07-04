@@ -35,6 +35,9 @@
         "import/no-unresolved": ["error", {
             "ignore": ["semantic-css/"]
         }],
+        "import/order": ["error", {
+            "alphabetize": { "order": "asc", "caseInsensitive": true }
+        }],
         "no-console": ["error", { "allow": ["warn", "error"] }]
     }
 }

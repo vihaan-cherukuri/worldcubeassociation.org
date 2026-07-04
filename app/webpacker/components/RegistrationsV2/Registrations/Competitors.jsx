@@ -1,20 +1,20 @@
 import { useQuery } from '@tanstack/react-query';
+import _ from 'lodash';
 import React, { useMemo, useReducer } from 'react';
 import { Segment, Table } from 'semantic-ui-react';
-import _ from 'lodash';
+import I18n from '../../../lib/i18n';
+import { personUrl } from '../../../lib/requests/routes.js.erb';
+import { countries } from '../../../lib/wca-data.js.erb';
+import Errored from '../../Requests/Errored';
+import Loading from '../../Requests/Loading';
+import EventIcon from '../../wca/EventIcon';
+import RegionFlag from '../../wca/RegionFlag';
 import {
   getConfirmedRegistrations,
 } from '../api/registration/get/get_registrations';
 import createSortReducer from '../reducers/sortReducer';
-import EventIcon from '../../wca/EventIcon';
-import { personUrl } from '../../../lib/requests/routes.js.erb';
-import I18n from '../../../lib/i18n';
-import { countries } from '../../../lib/wca-data.js.erb';
-import { getPeopleCounts, getTotals, getUserPositionInfo } from './utils';
 import PreTableInfo from './PreTableInfo';
-import Errored from '../../Requests/Errored';
-import Loading from '../../Requests/Loading';
-import RegionFlag from '../../wca/RegionFlag';
+import { getPeopleCounts, getTotals, getUserPositionInfo } from './utils';
 
 const sortReducer = createSortReducer(['name', 'country', 'total']);
 

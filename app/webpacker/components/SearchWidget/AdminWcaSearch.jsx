@@ -1,8 +1,8 @@
 import React from 'react';
 import { Checkbox } from 'semantic-ui-react';
-import { IdWcaSearch } from './WcaSearch';
-import SEARCH_MODELS from './SearchModel';
 import useCheckboxState from '../../lib/hooks/useCheckboxState';
+import SEARCH_MODELS from './SearchModel';
+import { IdWcaSearch } from './WcaSearch';
 
 function AdminWcaSearch({
   value, onChange, model, label, multiple,

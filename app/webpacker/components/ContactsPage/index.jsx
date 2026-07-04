@@ -1,14 +1,14 @@
 import React from 'react';
 import { Header, Message, Container } from 'semantic-ui-react';
-import I18n from '../../lib/i18n';
-import I18nHTMLTranslate from '../I18nHTMLTranslate';
-import ContactForm from './ContactForm';
 import useLoadedData from '../../lib/hooks/useLoadedData';
-import { apiV0Urls } from '../../lib/requests/routes.js.erb';
-import Loading from '../Requests/Loading';
-import StoreProvider from '../../lib/providers/StoreProvider';
-import contactsReducer, { getContactFormInitialState } from './store/reducer';
 import useQueryParams from '../../lib/hooks/useQueryParams';
+import I18n from '../../lib/i18n';
+import StoreProvider from '../../lib/providers/StoreProvider';
+import { apiV0Urls } from '../../lib/requests/routes.js.erb';
+import I18nHTMLTranslate from '../I18nHTMLTranslate';
+import Loading from '../Requests/Loading';
+import ContactForm from './ContactForm';
+import contactsReducer, { getContactFormInitialState } from './store/reducer';
 
 export default function ContactsPage({ recaptchaPublicKey }) {
   const { data: loggedInUserData, loading } = useLoadedData(apiV0Urls.users.me.userDetails);

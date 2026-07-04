@@ -1,6 +1,7 @@
+import { QueryClient, useQueries } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
 
-import { QueryClient, useQueries } from '@tanstack/react-query';
+import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import {
   userSearchApiUrl,
   userAdminSearchApiUrl,
@@ -12,10 +13,9 @@ import {
   competitionApiUrl,
   userRoleApiUrl,
 } from '../../lib/requests/routes.js.erb';
+import Loading from '../Requests/Loading';
 import MultiSearchInput, { itemToOption } from './MultiSearchInput';
 import SEARCH_MODELS from './SearchModel';
-import Loading from '../Requests/Loading';
-import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 
 const WCA_SEARCH_QUERY_CLIENT = new QueryClient();
 

@@ -1,8 +1,8 @@
-import React, { useCallback } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import getUserDetails from './api/getUserDetails';
-import Loading from '../Requests/Loading';
+import React, { useCallback } from 'react';
 import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import getUserDetails from './api/getUserDetails';
 import EditUserForm from './EditUserForm';
 
 export default function EditUser({ id, onSuccess }) {

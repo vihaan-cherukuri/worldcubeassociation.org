@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Button, Icon, Popup,
 } from 'semantic-ui-react';
-import { WCA_EVENT_IDS } from '../../lib/wca-data.js.erb';
 import I18n from '../../lib/i18n';
+import { WCA_EVENT_IDS } from '../../lib/wca-data.js.erb';
 
 export default function EventSelector({
   title = I18n.t('competitions.competition_form.events'),

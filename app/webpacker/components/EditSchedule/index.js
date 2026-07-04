@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { useCallback, useMemo, useState } from 'react';
 
 import {
@@ -7,17 +8,15 @@ import {
   Message,
 } from 'semantic-ui-react';
 
-import _ from 'lodash';
-
+import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
+import ConfirmProvider from '../../lib/providers/ConfirmProvider';
+import Store, { useDispatch, useStore } from '../../lib/providers/StoreProvider';
+import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
 import { useSaveWcifAction } from '../../lib/utils/wcif';
+import EditActivities from './EditActivities';
+import EditVenues from './EditVenues';
 import { changesSaved } from './store/actions';
 import wcifScheduleReducer from './store/reducer';
-import Store, { useDispatch, useStore } from '../../lib/providers/StoreProvider';
-import ConfirmProvider from '../../lib/providers/ConfirmProvider';
-import EditVenues from './EditVenues';
-import EditActivities from './EditActivities';
-import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
-import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
 
 function EditSchedule({
   wcifEvents,

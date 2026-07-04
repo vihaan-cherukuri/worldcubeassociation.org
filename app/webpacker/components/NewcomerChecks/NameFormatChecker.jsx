@@ -1,10 +1,10 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import { Button, Message, Table } from 'semantic-ui-react';
-import newcomerNameFormatCheck from './api/newcomerNameFormatCheck';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
 import I18n from '../../lib/i18n';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import newcomerNameFormatCheck from './api/newcomerNameFormatCheck';
 
 export default function NameFormatChecker({ competitionId, setUserIdToEdit }) {
   const {

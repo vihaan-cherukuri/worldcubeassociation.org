@@ -1,9 +1,9 @@
 import React, { useCallback, useMemo } from 'react';
 import { Button, Header } from 'semantic-ui-react';
-import EventSelector from '../wca/EventSelector';
 import I18n from '../../lib/i18n';
-import { roundToRoundTypeName } from './util';
+import EventSelector from '../wca/EventSelector';
 import DndWorkbench from './DndWorkbench';
+import { roundToRoundTypeName } from './util';
 
 function RoundsButtonPicker({
   availableOptions: availableRounds,

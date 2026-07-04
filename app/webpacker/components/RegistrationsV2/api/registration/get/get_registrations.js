@@ -1,3 +1,4 @@
+import { fetchJsonOrError } from '../../../../../lib/requests/fetchWithAuthenticityToken';
 import {
   allRegistrationsUrl,
   confirmedRegistrationsUrl,
@@ -6,7 +7,6 @@ import {
   singleRegistrationUrl,
   registrationHistoryUrl,
 } from '../../../../../lib/requests/routes.js.erb';
-import { fetchJsonOrError } from '../../../../../lib/requests/fetchWithAuthenticityToken';
 
 export async function getConfirmedRegistrations(competition) {
   const route = confirmedRegistrationsUrl(competition.id);

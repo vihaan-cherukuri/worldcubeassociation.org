@@ -1,3 +1,4 @@
+import { useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
 import {
   Button,
@@ -7,25 +8,24 @@ import {
   Message,
   Segment,
 } from 'semantic-ui-react';
-import { useQueryClient } from '@tanstack/react-query';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { showMessage } from '../Register/RegistrationMessage';
-import EventSelector from '../../wca/EventSelector';
-import RegistrationPayments from './RegistrationPayments';
-import { personUrl, editPersonUrl } from '../../../lib/requests/routes.js.erb';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useInputUpdater } from '../../../lib/hooks/useInputState';
+import { useOrderedSetWrapper } from '../../../lib/hooks/useOrderedSet';
 import I18n from '../../../lib/i18n';
-import RegistrationHistory from './RegistrationHistory';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
+import { personUrl, editPersonUrl } from '../../../lib/requests/routes.js.erb';
 import { hasPassed } from '../../../lib/utils/dates';
+import { WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
+import EventSelector from '../../wca/EventSelector';
 import {
   useFormObjectState,
   useFormSuccessHandler,
   useHasFormValueChanged,
 } from '../../wca/FormBuilder/provider/FormObjectProvider';
-import { useInputUpdater } from '../../../lib/hooks/useInputState';
-import { useOrderedSetWrapper } from '../../../lib/hooks/useOrderedSet';
-import { WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
 import { useUpdateRegistrationMutation } from '../lib/mutations';
+import { showMessage } from '../Register/RegistrationMessage';
+import RegistrationHistory from './RegistrationHistory';
+import RegistrationPayments from './RegistrationPayments';
 
 export default function RegistrationEditor({ registrationId, competitor, competitionInfo }) {
   const dispatch = useDispatch();

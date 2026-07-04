@@ -1,13 +1,13 @@
-import React from 'react';
 import { DateTime } from 'luxon';
+import React from 'react';
+import I18n from '../../../../lib/i18n';
 import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
-import WarningsVerification from './WarningsVerification';
-import TimelineView from './TimelineView';
-import MergeInboxResults from './MergeInboxResults';
 import CreateWcaIds from './CreateWcaIds';
 import FinalSteps from './FinalSteps';
+import MergeInboxResults from './MergeInboxResults';
 import MiscActions from './MiscActions';
-import I18n from '../../../../lib/i18n';
+import TimelineView from './TimelineView';
+import WarningsVerification from './WarningsVerification';
 
 export default function CompetitionResultActionerView({ ticketDetails, currentStakeholder }) {
   const { ticket: { metadata: { status } } } = ticketDetails;

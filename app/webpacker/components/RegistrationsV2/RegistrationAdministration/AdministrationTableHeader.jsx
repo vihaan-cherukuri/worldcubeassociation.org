@@ -1,5 +1,5 @@
-import { Checkbox, Table } from 'semantic-ui-react';
 import React from 'react';
+import { Checkbox, Table } from 'semantic-ui-react';
 import I18n from '../../../lib/i18n';
 import EventIcon from '../../wca/EventIcon';
 

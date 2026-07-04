@@ -1,13 +1,13 @@
 import React from 'react';
 import { Message } from 'semantic-ui-react';
 import { useStore } from '../../lib/providers/StoreProvider';
-import AnnouncementActions from './AnnouncementActions';
-import UserPreferences from './UserPreferences';
-import { useFormInitialObject } from '../wca/FormBuilder/provider/FormObjectProvider';
 import I18nHTMLTranslate from '../I18nHTMLTranslate';
 import Loading from '../Requests/Loading';
+import { useFormInitialObject } from '../wca/FormBuilder/provider/FormObjectProvider';
+import AnnouncementActions from './AnnouncementActions';
 import { useConfirmationData } from './api';
 import ConfirmationToggles from './ConfirmationToggles';
+import UserPreferences from './UserPreferences';
 
 // FIXME: We should consider a better way of accessing the friendly ID instead of hard-coding.
 const WCAT_FRIENDLY_ID = 'wcat';

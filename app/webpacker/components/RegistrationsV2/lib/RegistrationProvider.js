@@ -1,11 +1,11 @@
+import { useQuery } from '@tanstack/react-query';
 import React, {
   createContext, useCallback, useContext, useEffect, useMemo, useState,
 } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { getRegistrationByUser } from '../api/registration/get/get_registrations';
-import { showMessage } from '../Register/RegistrationMessage';
 import pollRegistrations from '../api/registration/get/poll_registrations';
+import { showMessage } from '../Register/RegistrationMessage';
 
 const REFETCH_INTERVAL = 3000;
 

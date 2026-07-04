@@ -1,12 +1,12 @@
 import { DateTime } from 'luxon';
 import React from 'react';
-import { countries } from '../../../lib/wca-data.js.erb';
 import I18n from '../../../lib/i18n';
+import { countries } from '../../../lib/wca-data.js.erb';
+import { formatAttemptResult } from '../../../lib/wca-live/attempts';
 import {
   EventCell,
   PersonCell,
 } from '../TableCells';
-import { formatAttemptResult } from '../../../lib/wca-live/attempts';
 import {
   attemptResultColumn,
   competitionColumn,

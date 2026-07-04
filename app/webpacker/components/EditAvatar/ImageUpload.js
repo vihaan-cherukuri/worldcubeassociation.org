@@ -5,10 +5,10 @@ import {
   Form, Header,
   Icon,
 } from 'semantic-ui-react';
-import I18n from '../../lib/i18n';
 import useCheckboxState from '../../lib/hooks/useCheckboxState';
 import useInputState from '../../lib/hooks/useInputState';
 import useToggleButtonState from '../../lib/hooks/useToggleButtonState';
+import I18n from '../../lib/i18n';
 import { avatarImageTypes } from '../../lib/wca-data.js.erb';
 
 function ImageUpload({

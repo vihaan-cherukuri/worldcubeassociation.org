@@ -1,6 +1,6 @@
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import { Segment, Table } from 'semantic-ui-react';
 import React from 'react';
+import { Segment, Table } from 'semantic-ui-react';
 import I18n from '../../lib/i18n';
 
 export default function DataTable({ rows, config }) {

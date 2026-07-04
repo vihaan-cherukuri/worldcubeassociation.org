@@ -2,11 +2,11 @@ import React from 'react';
 import {
   Button, Form, Header, HeaderSubheader,
 } from 'semantic-ui-react';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import { viewUrls } from '../../../../lib/requests/routes.js.erb';
-import useQueryParams from '../../../../lib/hooks/useQueryParams';
 import useInputState from '../../../../lib/hooks/useInputState';
+import useQueryParams from '../../../../lib/hooks/useQueryParams';
+import { viewUrls } from '../../../../lib/requests/routes.js.erb';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 
 export default function CompetitionsInput() {
   const [queryParams] = useQueryParams();

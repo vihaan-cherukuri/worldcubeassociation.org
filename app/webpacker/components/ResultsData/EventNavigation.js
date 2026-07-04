@@ -1,8 +1,8 @@
 import classnames from 'classnames';
-import { Popup, Menu } from 'semantic-ui-react';
 import React from 'react';
-import EventIcon from '../wca/EventIcon';
+import { Popup, Menu } from 'semantic-ui-react';
 import { events } from '../../lib/wca-data.js.erb';
+import EventIcon from '../wca/EventIcon';
 import '../../stylesheets/event_navigation.scss';
 
 function EventNavigation({ selected, eventIds, onSelect }) {

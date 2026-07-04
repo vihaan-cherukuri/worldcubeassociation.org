@@ -1,11 +1,11 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { Button, Modal } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
 import useInputState from '../../lib/hooks/useInputState';
-import createComment from './api/createComment';
-import Loading from '../Requests/Loading';
 import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
+import createComment from './api/createComment';
 
 export default function TicketCommentCreate({
   open, onClose, ticketId, currentStakeholder,

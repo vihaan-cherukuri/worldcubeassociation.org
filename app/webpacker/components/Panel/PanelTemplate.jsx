@@ -6,8 +6,8 @@ import {
 } from 'semantic-ui-react';
 import useHash from '../../lib/hooks/useHash';
 import ConfirmProvider from '../../lib/providers/ConfirmProvider';
-import PanelPages from './PanelPages';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
+import PanelPages from './PanelPages';
 
 export default function PanelTemplate({
   heading,

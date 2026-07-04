@@ -3,11 +3,11 @@ import {
   Icon, Form, Grid, Popup,
 } from 'semantic-ui-react';
 
-import RegionSelector from '../../wca/RegionSelector';
-import { personApiUrl } from '../../../lib/requests/routes.js.erb';
-import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
 import useNestedInputUpdater from '../../../lib/hooks/useNestedInputUpdater';
 import I18n from '../../../lib/i18n';
+import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
+import { personApiUrl } from '../../../lib/requests/routes.js.erb';
+import RegionSelector from '../../wca/RegionSelector';
 
 function PersonForm({ personData, setPersonData }) {
   const { wcaId, name, countryIso2 } = personData;

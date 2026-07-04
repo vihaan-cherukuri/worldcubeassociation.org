@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
-import { useCallback, useState } from 'react';
 import _ from 'lodash';
 import { DateTime } from 'luxon';
+import { useCallback, useState } from 'react';
+import I18n from '../../lib/i18n';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { competitionScrambleFilesUrl } from '../../lib/requests/routes.js.erb';
 import { getRoundTypeId, parseActivityCode, shortLabelForActivityCode } from '../../lib/utils/wcif';
-import I18n from '../../lib/i18n';
 import { events, formats } from '../../lib/wca-data.js.erb';
 
 export const ATTEMPT_BASED_EVENTS = ['333fm', '333mbf'];

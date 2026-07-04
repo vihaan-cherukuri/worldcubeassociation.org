@@ -3,8 +3,8 @@ import {
   Accordion, Container, Header, Message, Table,
 } from 'semantic-ui-react';
 import I18n from '../../../../lib/i18n';
-import { ResultRowHeader } from '../../../ResultsData/Results/ResultRowHeader';
 import ResultRowBody from '../../../ResultsData/Results/ResultRowBody';
+import { ResultRowHeader } from '../../../ResultsData/Results/ResultRowHeader';
 
 export default function ResultsPreviewAccordion({ roundDetails, groupedResults }) {
   const [openItems, setOpenItems] = useState(

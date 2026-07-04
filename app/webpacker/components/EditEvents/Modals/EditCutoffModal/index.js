@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
 import _ from 'lodash';
+import React, { useState } from 'react';
 import { Label } from 'semantic-ui-react';
-import { formats } from '../../../../lib/wca-data.js.erb';
 import useInputState from '../../../../lib/hooks/useInputState';
+import { useDispatch } from '../../../../lib/providers/StoreProvider';
 import { roundIdToString } from '../../../../lib/utils/wcif';
+import { formats } from '../../../../lib/wca-data.js.erb';
+import AttemptResultField from '../../../EditResult/WCALive/AttemptResultField/AttemptResultField';
+import MbldPointsField from '../../../EditResult/WCALive/AttemptResultField/MbldPointsField';
+import { updateCutoff } from '../../store/actions';
 import { roundCutoffToString } from '../../utils';
 import ButtonActivatedModal from '../ButtonActivatedModal';
 import CutoffFormatField from './CutoffFormatInput';
-import { useDispatch } from '../../../../lib/providers/StoreProvider';
-import { updateCutoff } from '../../store/actions';
-import AttemptResultField from '../../../EditResult/WCALive/AttemptResultField/AttemptResultField';
-import MbldPointsField from '../../../EditResult/WCALive/AttemptResultField/MbldPointsField';
 
 /**
  * Developer notes: "cutoffFormat" and "NumberOfAttempts" is used interchangeably

@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import {
   Button, Confirm, Message, Table,
 } from 'semantic-ui-react';
-import getEventsMergedData from '../../../../api/competitionResult/getEventsMergedData';
-import Loading from '../../../../../Requests/Loading';
 import Errored from '../../../../../Requests/Errored';
+import Loading from '../../../../../Requests/Loading';
 import deleteResultsData from '../../../../api/competitionResult/deleteResultsData';
+import getEventsMergedData from '../../../../api/competitionResult/getEventsMergedData';
 
 export default function EventsMergedDataContent({ ticketDetails }) {
   const queryClient = useQueryClient();

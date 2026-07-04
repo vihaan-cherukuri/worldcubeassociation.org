@@ -1,5 +1,5 @@
-import React from 'react';
 import { DateTime, Interval } from 'luxon';
+import React from 'react';
 import I18n from '../i18n';
 
 function parseDateString(yyyymmddDateString) {

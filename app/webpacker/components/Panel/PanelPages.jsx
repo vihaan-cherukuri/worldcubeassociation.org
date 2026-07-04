@@ -1,4 +1,3 @@
-import { PANEL_PAGES } from '../../lib/wca-data.js.erb';
 import {
   countryBandsUrl,
   subordinateDelegateClaimsUrl,
@@ -8,38 +7,39 @@ import {
   serverStatusPageUrl,
   mergeProfilesUrl,
 } from '../../lib/requests/routes.js.erb';
-import PostingCompetitionsTable from '../PostingCompetitions';
-import EditPersonPage from './pages/EditPersonPage';
-import BannedCompetitorsPage from './pages/BannedCompetitorsPage';
-import GroupsManagerAdmin from './pages/GroupsManagerAdmin';
-import Translators from './pages/Translators';
-import DuesExport from './pages/DuesExport';
+import { PANEL_PAGES } from '../../lib/wca-data.js.erb';
 import DelegateProbations from '../DelegateProbations';
-import XeroUsers from './pages/XeroUsers';
-import DuesRedirect from './pages/DuesRedirect';
-import DelegateForms from './pages/DelegateForms';
-import Regions from './pages/Regions';
-import LeaderForms from './pages/LeaderForms';
-import GroupsManager from './pages/GroupsManager';
-import ImportantLinks from './pages/ImportantLinks';
-import SeniorDelegatesList from './pages/SeniorDelegatesList';
-import LeadersAdminPage from './pages/LeadersAdminPage';
-import BoardEditorPage from './pages/BoardEditorPage';
-import OfficersEditor from './pages/OfficersEditor';
-import RegionsAdmin from './pages/RegionsAdmin';
-import RegionManager from './pages/RegionManager';
-import DownloadVoters from './pages/DownloadVoters';
-import ApprovePictures from './pages/ApprovePictures';
-import EditPersonRequestsPage from './pages/EditPersonRequestsPage';
+import PostingCompetitionsTable from '../PostingCompetitions';
 import AnonymizationScriptPage from './pages/AnonymizationScriptPage';
-import CreateNewcomersPage from './pages/CreateNewcomersPage';
-import RunValidatorsForm from './pages/RunValidatorsPage/RunValidatorsForm';
-import ComputeAuxiliaryDataPage from './pages/ComputeAuxiliaryDataPage';
-import GenerateDataExportsPage from './pages/GenerateDataExportsPage';
+import ApprovePictures from './pages/ApprovePictures';
+import BannedCompetitorsPage from './pages/BannedCompetitorsPage';
+import BoardEditorPage from './pages/BoardEditorPage';
 import CheckRecordsPage from './pages/CheckRecordsPage';
+import ComputeAuxiliaryDataPage from './pages/ComputeAuxiliaryDataPage';
+import CreateNewcomersPage from './pages/CreateNewcomersPage';
+import DelegateForms from './pages/DelegateForms';
+import DownloadVoters from './pages/DownloadVoters';
+import DuesExport from './pages/DuesExport';
+import DuesRedirect from './pages/DuesRedirect';
+import EditPersonPage from './pages/EditPersonPage';
+import EditPersonRequestsPage from './pages/EditPersonRequestsPage';
 import FixResultsPage from './pages/FixResultsPage';
-import MergeUsersPage from './pages/MergeUsersPage';
+import GenerateDataExportsPage from './pages/GenerateDataExportsPage';
+import GroupsManager from './pages/GroupsManager';
+import GroupsManagerAdmin from './pages/GroupsManagerAdmin';
 import HelpfulQueriesPage from './pages/HelpfulQueriesPage';
+import ImportantLinks from './pages/ImportantLinks';
+import LeaderForms from './pages/LeaderForms';
+import LeadersAdminPage from './pages/LeadersAdminPage';
+import MergeUsersPage from './pages/MergeUsersPage';
+import OfficersEditor from './pages/OfficersEditor';
+import RegionManager from './pages/RegionManager';
+import Regions from './pages/Regions';
+import RegionsAdmin from './pages/RegionsAdmin';
+import RunValidatorsForm from './pages/RunValidatorsPage/RunValidatorsForm';
+import SeniorDelegatesList from './pages/SeniorDelegatesList';
+import Translators from './pages/Translators';
+import XeroUsers from './pages/XeroUsers';
 
 export default {
   [PANEL_PAGES.postingDashboard]: {

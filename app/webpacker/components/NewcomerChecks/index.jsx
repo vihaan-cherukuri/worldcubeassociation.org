@@ -1,12 +1,12 @@
+import { useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Container, Modal, Tab } from 'semantic-ui-react';
-import { useQueryClient } from '@tanstack/react-query';
+import ConfirmProvider from '../../lib/providers/ConfirmProvider';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
+import EditUser from '../EditUser';
+import DobChecker from './DobChecker';
 import DuplicateChecker from './DuplicateChecker';
 import NameFormatChecker from './NameFormatChecker';
-import DobChecker from './DobChecker';
-import EditUser from '../EditUser';
-import ConfirmProvider from '../../lib/providers/ConfirmProvider';
 
 export default function Wrapper({ competitionId }) {
   return (

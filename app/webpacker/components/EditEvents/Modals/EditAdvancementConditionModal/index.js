@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
 import _ from 'lodash';
+import React, { useState } from 'react';
 import { Label } from 'semantic-ui-react';
 import useInputState from '../../../../lib/hooks/useInputState';
-import { roundIdToString } from '../../../../lib/utils/wcif';
-import ButtonActivatedModal from '../ButtonActivatedModal';
 import { useDispatch } from '../../../../lib/providers/StoreProvider';
-import { updateAdvancementCondition } from '../../store/actions';
-import AttemptResultField from '../../../EditResult/WCALive/AttemptResultField/AttemptResultField';
 import { matchResult } from '../../../../lib/utils/edit-events';
-import AdvancementTypeField from './AdvancementTypeInput';
+import { roundIdToString } from '../../../../lib/utils/wcif';
+import AttemptResultField from '../../../EditResult/WCALive/AttemptResultField/AttemptResultField';
 import MbldPointsField from '../../../EditResult/WCALive/AttemptResultField/MbldPointsField';
+import { updateAdvancementCondition } from '../../store/actions';
+import ButtonActivatedModal from '../ButtonActivatedModal';
+import AdvancementTypeField from './AdvancementTypeInput';
 
 const MIN_ADVANCE_PERCENT = 1;
 const MAX_ADVANCE_PERCENT = 75;

@@ -7,8 +7,8 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
-import VenuePanel from './VenuePanel';
 import { addVenue } from '../store/actions';
+import VenuePanel from './VenuePanel';
 
 function EditVenues({
   countryZones,

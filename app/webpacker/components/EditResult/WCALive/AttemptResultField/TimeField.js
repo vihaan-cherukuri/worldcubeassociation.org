@@ -1,13 +1,13 @@
+import _ from 'lodash';
 import React, { useState, useCallback } from 'react';
 import { Form } from 'semantic-ui-react';
-import _ from 'lodash';
-import { DNF_KEYS, DNS_KEYS } from './keybindings';
 import {
   DNF_VALUE,
   SKIPPED_VALUE,
   DNS_VALUE,
   centisecondsToClockFormat,
 } from '../../../../lib/wca-live/attempts';
+import { DNF_KEYS, DNS_KEYS } from './keybindings';
 
 function reformatInput(input) {
   const number = _.toInteger(input.replace(/\D/g, '')) || 0;

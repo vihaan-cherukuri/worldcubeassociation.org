@@ -1,10 +1,10 @@
+import { QueryClient, useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Form } from 'semantic-ui-react';
-import { QueryClient, useQuery } from '@tanstack/react-query';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 import UtcDatePicker from '../../../wca/UtcDatePicker';
 import getCompetitionCount from './api/getCompetitionCount';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
 
 const RUN_VALIDATORS_QUERY_CLIENT = new QueryClient();
 

@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {
   createContext,
   useCallback,
@@ -5,9 +6,8 @@ import React, {
   useMemo,
   useReducer,
 } from 'react';
-import _ from 'lodash';
-import usePerpetualState from '../hooks/usePerpetualState';
 import { hasPassed } from '../../../lib/utils/dates';
+import usePerpetualState from '../hooks/usePerpetualState';
 
 const StepNavigationContext = createContext();
 

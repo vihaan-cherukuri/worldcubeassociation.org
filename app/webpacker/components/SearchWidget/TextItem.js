@@ -1,5 +1,5 @@
-import React from 'react';
 import DOMPurify from 'dompurify';
+import React from 'react';
 import I18n from '../../lib/i18n';
 
 function TextItem({ item }) {

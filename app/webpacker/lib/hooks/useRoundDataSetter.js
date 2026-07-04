@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
 import _ from 'lodash';
+import { useCallback } from 'react';
 import useNestedInputUpdater from './useNestedInputUpdater';
 
 // Highly specific hook for the transition from round_type_id to round_id.

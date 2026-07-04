@@ -8,11 +8,11 @@ import {
   Segment,
 } from 'semantic-ui-react';
 
-import { copyRoomActivities } from '../store/actions';
-import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
-import { venueWcifFromRoomId } from '../../../lib/utils/wcif';
 import useInputState from '../../../lib/hooks/useInputState';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
+import { venueWcifFromRoomId } from '../../../lib/utils/wcif';
+import { copyRoomActivities } from '../store/actions';
 
 function ActionsHeader({
   selectedRoomId,

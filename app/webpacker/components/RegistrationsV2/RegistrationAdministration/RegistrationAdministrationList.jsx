@@ -5,20 +5,11 @@ import React, {
 import {
   Accordion, Button, Checkbox, Divider, Form, Header, Icon, List, Modal, Segment, Sticky,
 } from 'semantic-ui-react';
-import { getAllRegistrations } from '../api/registration/get/get_registrations';
-import RegistrationAdministrationSearch from './RegistrationAdministrationSearch';
-import RegistrationActions from './RegistrationActions';
-import { showMessage, showMessages } from '../Register/RegistrationMessage';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { autoAcceptPreferences } from '../../../lib/wca-data.js.erb';
-import I18n from '../../../lib/i18n';
-import Loading from '../../Requests/Loading';
-import { bulkUpdateRegistrations } from '../api/registration/patch/update_registration';
-import bulkAutoAccept from '../api/registration/patch/bulk_auto_accept';
-import RegistrationAdministrationTable from './RegistrationsAdministrationTable';
 import useCheckboxState from '../../../lib/hooks/useCheckboxState';
 import useOrderedSet from '../../../lib/hooks/useOrderedSet';
 import useStoredReducer from '../../../lib/hooks/useStoredReducer';
+import I18n from '../../../lib/i18n';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import {
   APPROVED_COLOR, APPROVED_ICON,
   CANCELLED_COLOR, CANCELLED_ICON,
@@ -29,6 +20,15 @@ import {
   REJECTED_COLOR, REJECTED_ICON,
   WAITLIST_COLOR, WAITLIST_ICON,
 } from '../../../lib/utils/registrationAdmin';
+import { autoAcceptPreferences } from '../../../lib/wca-data.js.erb';
+import Loading from '../../Requests/Loading';
+import { getAllRegistrations } from '../api/registration/get/get_registrations';
+import bulkAutoAccept from '../api/registration/patch/bulk_auto_accept';
+import { bulkUpdateRegistrations } from '../api/registration/patch/update_registration';
+import { showMessage, showMessages } from '../Register/RegistrationMessage';
+import RegistrationActions from './RegistrationActions';
+import RegistrationAdministrationSearch from './RegistrationAdministrationSearch';
+import RegistrationAdministrationTable from './RegistrationsAdministrationTable';
 
 const expandableColumns = {
   dob: I18n.t('activerecord.attributes.user.dob'),

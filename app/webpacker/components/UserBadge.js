@@ -1,10 +1,10 @@
+import classnames from 'classnames';
 import React from 'react';
 import {
   Button, Icon, Label, Popup,
 } from 'semantic-ui-react';
-import classnames from 'classnames';
-import UserAvatar from './UserAvatar';
 import I18n from '../lib/i18n';
+import UserAvatar from './UserAvatar';
 
 import '../stylesheets/user_badge.scss';
 

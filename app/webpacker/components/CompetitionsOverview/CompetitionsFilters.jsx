@@ -1,18 +1,18 @@
 import React from 'react';
+import PulseLoader from 'react-spinners/PulseLoader';
 import {
   Button, Icon, Form, Dropdown, Popup, List, Input,
 } from 'semantic-ui-react';
-import PulseLoader from 'react-spinners/PulseLoader';
 
 import I18n from '../../lib/i18n';
 import {
   competitionConstants, nonFutureCompetitionYears,
 } from '../../lib/wca-data.js.erb';
 
-import useDelegatesData from './useDelegatesData';
-import UtcDatePicker from '../wca/UtcDatePicker';
 import EventSelector from '../wca/EventSelector';
 import RegionSelector from '../wca/RegionSelector';
+import UtcDatePicker from '../wca/UtcDatePicker';
+import useDelegatesData from './useDelegatesData';
 
 function CompetitionsFilters({
   filterState,

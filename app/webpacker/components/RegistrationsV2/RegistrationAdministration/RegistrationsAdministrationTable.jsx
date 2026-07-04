@@ -1,16 +1,16 @@
+import { DragDropContext, Droppable } from '@hello-pangea/dnd';
+import { noop } from 'lodash';
 import React, { useMemo, useReducer } from 'react';
 import {
   Ref, Segment, Table, TableFooter,
 } from 'semantic-ui-react';
-import { DragDropContext, Droppable } from '@hello-pangea/dnd';
-import { noop } from 'lodash';
 import I18n from '../../../lib/i18n';
-import TableHeader from './AdministrationTableHeader';
-import TableRow from './AdministrationTableRow';
-import RegistrationAdministrationTableFooter from './RegistrationAdministrationTableFooter';
 import { sortRegistrations } from '../../../lib/utils/registrationAdmin';
 import { WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
 import createSortReducer from '../reducers/sortReducer';
+import TableHeader from './AdministrationTableHeader';
+import TableRow from './AdministrationTableRow';
+import RegistrationAdministrationTableFooter from './RegistrationAdministrationTableFooter';
 
 export const sortReducer = createSortReducer([
   'name',

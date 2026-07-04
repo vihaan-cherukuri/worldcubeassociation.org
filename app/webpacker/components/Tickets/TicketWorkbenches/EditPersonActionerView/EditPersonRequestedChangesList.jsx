@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React from 'react';
 import { Button, Header, Table } from 'semantic-ui-react';
-import _ from 'lodash';
 import I18n from '../../../../lib/i18n';
 import { countries } from '../../../../lib/wca-data.js.erb';
 

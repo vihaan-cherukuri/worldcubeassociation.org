@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import React from 'react';
 
 import {
@@ -7,18 +8,17 @@ import {
   Icon,
   Segment,
 } from 'semantic-ui-react';
-import cn from 'classnames';
 import I18n from '../../../lib/i18n';
-import { events } from '../../../lib/wca-data.js.erb';
-import { pluralize } from '../../../lib/utils/edit-events';
-import RoundsTable from './RoundsTable';
-import RoundCountInput from './RoundCountInput';
-import { useStore, useDispatch } from '../../../lib/providers/StoreProvider';
 import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useStore, useDispatch } from '../../../lib/providers/StoreProvider';
+import { pluralize } from '../../../lib/utils/edit-events';
+import { events } from '../../../lib/wca-data.js.erb';
+import { EditQualificationModal } from '../Modals';
 import {
   addEvent, addRounds, removeEvent, removeRounds,
 } from '../store/actions';
-import { EditQualificationModal } from '../Modals';
+import RoundCountInput from './RoundCountInput';
+import RoundsTable from './RoundsTable';
 
 export default function EventPanel({
   wcifEvent,

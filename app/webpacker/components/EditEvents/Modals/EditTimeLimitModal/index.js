@@ -1,12 +1,12 @@
+import _ from 'lodash';
 import React, {
   useCallback, useEffect, useMemo, useState,
 } from 'react';
-import _ from 'lodash';
 import { Form, Label, Radio } from 'semantic-ui-react';
-import { events } from '../../../../lib/wca-data.js.erb';
-import { roundIdToString } from '../../../../lib/utils/wcif';
-import { centisecondsToClockFormat } from '../../../../lib/wca-live/attempts';
 import { useDispatch } from '../../../../lib/providers/StoreProvider';
+import { roundIdToString } from '../../../../lib/utils/wcif';
+import { events } from '../../../../lib/wca-data.js.erb';
+import { centisecondsToClockFormat } from '../../../../lib/wca-live/attempts';
 import TimeField from '../../../EditResult/WCALive/AttemptResultField/TimeField';
 import { updateTimeLimit } from '../../store/actions';
 import ButtonActivatedModal from '../ButtonActivatedModal';

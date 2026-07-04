@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
 import _ from 'lodash';
+import { useCallback } from 'react';
 
 // This aims to provide a quick wrapper to:
 //   - create an updater for a given path in a state created by useState or similar.

@@ -11,8 +11,8 @@ import {
   personUrl,
   competitionsUrl,
 } from '../../lib/requests/routes.js.erb';
-import UpcomingCompetitionTable from './UpcomingCompetitionTable';
 import PastCompetitionsTable from './PastCompetitionTable';
+import UpcomingCompetitionTable from './UpcomingCompetitionTable';
 
 export default function MyCompetitions({
   permissions,

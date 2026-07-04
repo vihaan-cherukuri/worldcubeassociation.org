@@ -3,10 +3,10 @@ import {
   Form, Grid,
 } from 'semantic-ui-react';
 
-import AttemptResultFieldWrapper from './AttemptResultFieldWrapper';
-import MarkerField from '../WCALive/AttemptResultField/MarkerField';
-import { average, best, formatAttemptResult } from '../../../lib/wca-live/attempts';
 import useNestedInputUpdater from '../../../lib/hooks/useNestedInputUpdater';
+import { average, best, formatAttemptResult } from '../../../lib/wca-live/attempts';
+import MarkerField from '../WCALive/AttemptResultField/MarkerField';
+import AttemptResultFieldWrapper from './AttemptResultFieldWrapper';
 
 function AttemptsForm({
   state, setState, eventId, computeAverage,

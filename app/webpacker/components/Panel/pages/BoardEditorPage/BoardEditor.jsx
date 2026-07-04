@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import {
   Button, Form, Header, Modal, Table,
 } from 'semantic-ui-react';
-import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
+import useInputState from '../../../../lib/hooks/useInputState';
 import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
 import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../../../lib/wca-data.js.erb';
 import Loading from '../../../Requests/Loading';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
 import WcaSearch from '../../../SearchWidget/WcaSearch';
-import useInputState from '../../../../lib/hooks/useInputState';
 
 export default function BoardEditor({ boardRoles, sync }) {
   const [openModal, setOpenModal] = useState(false);

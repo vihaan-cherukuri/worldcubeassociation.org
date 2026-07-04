@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputRadioUser, InputString, InputUsers } from '../../wca/FormBuilder/input/FormInputs';
-import SubSection from '../../wca/FormBuilder/SubSection';
 import { useFormValue } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import SubSection from '../../wca/FormBuilder/SubSection';
 
 export default function Staff() {
   const appointedDelegateIds = useFormValue('staffDelegateIds', ['staff']);

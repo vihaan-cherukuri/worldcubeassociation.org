@@ -1,5 +1,5 @@
-import React from 'react';
 import _ from 'lodash';
+import React from 'react';
 import {
   Button, Icon, List, Popup, Table,
 } from 'semantic-ui-react';

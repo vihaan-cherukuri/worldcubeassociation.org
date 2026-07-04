@@ -2,14 +2,14 @@
 /* eslint-disable camelcase */
 import React, { useCallback, useMemo } from 'react';
 import { Message } from 'semantic-ui-react';
-import { seriesEligibleCompetitionsJsonUrl } from '../../../lib/requests/routes.js.erb';
-import I18n from '../../../lib/i18n';
-import CompsTable from './CompsTable';
-import Loading from '../../Requests/Loading';
-import TableWrapper from './TableWrapper';
-import { useStore } from '../../../lib/providers/StoreProvider';
 import useLoadedData from '../../../lib/hooks/useLoadedData';
+import I18n from '../../../lib/i18n';
+import { useStore } from '../../../lib/providers/StoreProvider';
+import { seriesEligibleCompetitionsJsonUrl } from '../../../lib/requests/routes.js.erb';
+import Loading from '../../Requests/Loading';
 import { useFormObject, useFormUpdateAction } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import CompsTable from './CompsTable';
+import TableWrapper from './TableWrapper';
 
 function MissingInfo({ missingDate, missingLocation }) {
   return (

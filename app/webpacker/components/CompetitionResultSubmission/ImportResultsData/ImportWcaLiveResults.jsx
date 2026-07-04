@@ -1,11 +1,11 @@
-import React from 'react';
 import { useMutation } from '@tanstack/react-query';
+import React from 'react';
 import { Form, Message } from 'semantic-ui-react';
-import Errored from '../../Requests/Errored';
-import importWcaLiveResults from '../api/importWcaLiveResults';
-import Loading from '../../Requests/Loading';
-import { contactRecipientUrl, uploadScramblesUrl } from '../../../lib/requests/routes.js.erb';
 import useCheckboxState from '../../../lib/hooks/useCheckboxState';
+import { contactRecipientUrl, uploadScramblesUrl } from '../../../lib/requests/routes.js.erb';
+import Errored from '../../Requests/Errored';
+import Loading from '../../Requests/Loading';
+import importWcaLiveResults from '../api/importWcaLiveResults';
 
 export default function ImportWcaLiveResults({
   competitionId,

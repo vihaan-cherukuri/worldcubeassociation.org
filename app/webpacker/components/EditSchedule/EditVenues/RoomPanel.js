@@ -6,8 +6,8 @@ import {
   Icon,
   Popup,
 } from 'semantic-ui-react';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { copyRoom, editRoom, removeRoom } from '../store/actions';
 
 function RoomPanel({

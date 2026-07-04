@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import {
   Button, Header, Message, Modal,
 } from 'semantic-ui-react';
+import useInputState from '../../../../lib/hooks/useInputState';
 import AdminWcaSearch from '../../../SearchWidget/AdminWcaSearch';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import useInputState from '../../../../lib/hooks/useInputState';
 import MergeUsers from './MergeUsers';
 
 export default function MergeUsersPage() {

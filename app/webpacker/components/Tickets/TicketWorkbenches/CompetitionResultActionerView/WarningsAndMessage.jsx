@@ -1,10 +1,10 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
+import React from 'react';
 import { Header, Segment } from 'semantic-ui-react';
-import ValidationOutput from '../../../Panel/pages/RunValidatorsPage/ValidationOutput';
-import runValidatorsForCompetitionList from '../../../Panel/pages/RunValidatorsPage/api/runValidatorsForCompetitionList';
 import { ALL_VALIDATORS } from '../../../../lib/wca-data.js.erb';
 import Markdown from '../../../Markdown';
+import runValidatorsForCompetitionList from '../../../Panel/pages/RunValidatorsPage/api/runValidatorsForCompetitionList';
+import ValidationOutput from '../../../Panel/pages/RunValidatorsPage/ValidationOutput';
 
 export default function WarningsAndMessage({ ticketDetails }) {
   const { ticket: { id, metadata } } = ticketDetails;

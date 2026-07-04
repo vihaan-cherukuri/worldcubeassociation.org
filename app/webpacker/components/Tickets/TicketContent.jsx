@@ -1,8 +1,8 @@
 import React from 'react';
-import TicketWorkbenches from './TicketWorkbenches';
-import TicketHeader from './TicketHeader';
 import TicketComments from './TicketComments';
+import TicketHeader from './TicketHeader';
 import TicketLogs from './TicketLogs';
+import TicketWorkbenches from './TicketWorkbenches';
 
 export default function TicketContent({ ticketDetails, currentStakeholder }) {
   const { ticket: { metadata_type: ticketType } } = ticketDetails;

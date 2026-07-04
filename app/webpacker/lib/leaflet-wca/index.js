@@ -1,7 +1,6 @@
 import 'leaflet/dist/leaflet.css';
 // https://github.com/smeijer/leaflet-geosearch/issues/151#issuecomment-347967474
 import 'leaflet-geosearch/assets/css/leaflet.css';
-import _ from 'lodash';
 import {
   Map as LeafletMap,
   TileLayer,
@@ -10,10 +9,11 @@ import {
   Popup,
   Icon,
 } from 'leaflet';
-import { GeoSearchControl } from 'leaflet-geosearch';
 import iconMarker2x from 'leaflet/dist/images/marker-icon-2x.png';
 import iconMarker from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import { GeoSearchControl } from 'leaflet-geosearch';
+import _ from 'lodash';
 import { railsEnv } from '../wca-data.js.erb';
 import { redMarker, blueMarker } from './markers';
 import { searchProvider, userTileProvider } from './providers';

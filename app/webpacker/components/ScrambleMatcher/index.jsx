@@ -1,22 +1,22 @@
+import { useMutation } from '@tanstack/react-query';
+import _ from 'lodash';
 import React, {
   useCallback, useMemo, useReducer, useRef,
 } from 'react';
 import {
   Button, Divider, Message, Ref,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import { useMutation } from '@tanstack/react-query';
+import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
-import FileUpload from './FileUpload';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { scramblesUpdateRoundMatchingUrl } from '../../lib/requests/routes.js.erb';
-import scrambleMatchReducer, { initializeState } from './reducer';
-import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
-import { AUTOMATCH_DEFAULT_SETTINGS, useConfigState, useScrambleFilesQuery } from './util';
-import EventAndRoundPicker from './EventAndRoundPicker';
-import { MoveModalProvider } from './MoveScrambleSetModal';
-import AutoMatchPanel from './AutoMatchPanel';
 import Errored from '../Requests/Errored';
+import AutoMatchPanel from './AutoMatchPanel';
+import EventAndRoundPicker from './EventAndRoundPicker';
+import FileUpload from './FileUpload';
+import { MoveModalProvider } from './MoveScrambleSetModal';
+import scrambleMatchReducer, { initializeState } from './reducer';
+import { AUTOMATCH_DEFAULT_SETTINGS, useConfigState, useScrambleFilesQuery } from './util';
 
 export default function Wrapper({
   wcifEvents,

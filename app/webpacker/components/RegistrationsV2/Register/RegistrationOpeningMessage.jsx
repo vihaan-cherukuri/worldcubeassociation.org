@@ -1,8 +1,8 @@
 import { DateTime } from 'luxon';
 import React, { useCallback } from 'react';
 import { Message } from 'semantic-ui-react';
-import I18nHTMLTranslate from '../../I18nHTMLTranslate';
 import { fullTimeDiff } from '../../../lib/utils/dates';
+import I18nHTMLTranslate from '../../I18nHTMLTranslate';
 import usePerpetualState from '../hooks/usePerpetualState';
 
 export default function RegistrationOpeningMessage({

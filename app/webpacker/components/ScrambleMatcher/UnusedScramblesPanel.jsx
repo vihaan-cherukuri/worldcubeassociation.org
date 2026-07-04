@@ -1,10 +1,10 @@
+import { Draggable, Droppable } from '@hello-pangea/dnd';
 import React, { useCallback, useState } from 'react';
 import {
   Accordion, Card, Header, Icon, Message, Ref,
 } from 'semantic-ui-react';
-import { Draggable, Droppable } from '@hello-pangea/dnd';
-import { DROPPABLE_ID_STORAGE, scrambleSetToTitle } from './util';
 import { ExternalSetActionButtons } from './ScrambleFileList';
+import { DROPPABLE_ID_STORAGE, scrambleSetToTitle } from './util';
 
 export function DraggableScrambleCard({
   scrambleEntity,

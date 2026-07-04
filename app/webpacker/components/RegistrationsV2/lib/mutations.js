@@ -1,8 +1,8 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useCallback } from 'react';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import updateRegistration from '../api/registration/patch/update_registration';
 import { showMessage } from '../Register/RegistrationMessage';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
 
 export const useRegistrationMutationErrorHandler = () => {
   const dispatch = useDispatch();

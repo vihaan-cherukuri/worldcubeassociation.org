@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React, { useState, useCallback } from 'react';
 import { Form } from 'semantic-ui-react';
-import _ from 'lodash';
 
 function numberToInput(number) {
   if (number === 0) return '';

@@ -1,10 +1,10 @@
 import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
-import importRegistrations from './api/importRegistrations';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
 import I18n from '../../lib/i18n';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import importRegistrations from './api/importRegistrations';
 
 export default function UploadRegistrationCsv({ competitionId, onImportSuccess }) {
   const [csvFile, setCsvFile] = useState();

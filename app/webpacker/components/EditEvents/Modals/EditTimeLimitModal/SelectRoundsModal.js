@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React, { useMemo, useState } from 'react';
 import { Checkbox, Form, Popup } from 'semantic-ui-react';
-import { events } from '../../../../lib/wca-data.js.erb';
 import { useStore } from '../../../../lib/providers/StoreProvider';
 import { parseActivityCode, roundIdToString } from '../../../../lib/utils/wcif';
+import { events } from '../../../../lib/wca-data.js.erb';
 import ButtonActivatedModal from '../ButtonActivatedModal';
 
 export default function SelectRoundsModal({ timeLimit, excludeEventId, onOk }) {

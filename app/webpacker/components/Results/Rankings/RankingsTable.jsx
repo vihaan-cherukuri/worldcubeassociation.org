@@ -1,7 +1,7 @@
-import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getRankings } from '../api/rankings';
+import React from 'react';
 import Loading from '../../Requests/Loading';
+import { getRankings } from '../api/rankings';
 import DataTable from '../DataTable';
 import { mapRankingsData, rankingsConfig } from './utils';
 

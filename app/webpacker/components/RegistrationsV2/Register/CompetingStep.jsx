@@ -12,21 +12,18 @@ import {
   Popup,
   Segment,
 } from 'semantic-ui-react';
-import submitEventRegistration from '../api/registration/post/submit_registration';
-import Processing from './Processing';
-import { contactCompetitionUrl, userPreferencesRoute } from '../../../lib/requests/routes.js.erb';
-import EventSelector from '../../wca/EventSelector';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { showMessage } from './RegistrationMessage';
-import I18n from '../../../lib/i18n';
-import I18nHTMLTranslate from '../../I18nHTMLTranslate';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
-import { events, defaultGuestLimit, WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
 import { eventsNotQualifiedFor, isQualifiedForEvent } from '../../../lib/helpers/qualifications';
-import { eventQualificationToString } from '../../../lib/utils/wcif';
-import { hasNotPassed } from '../../../lib/utils/dates';
-import { useRegistration } from '../lib/RegistrationProvider';
+import { useInputUpdater } from '../../../lib/hooks/useInputState';
 import { useOrderedSetWrapper } from '../../../lib/hooks/useOrderedSet';
+import I18n from '../../../lib/i18n';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
+import { contactCompetitionUrl, userPreferencesRoute } from '../../../lib/requests/routes.js.erb';
+import { hasNotPassed } from '../../../lib/utils/dates';
+import { eventQualificationToString } from '../../../lib/utils/wcif';
+import { events, defaultGuestLimit, WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
+import I18nHTMLTranslate from '../../I18nHTMLTranslate';
+import EventSelector from '../../wca/EventSelector';
 import {
   useFormInitialValue,
   useFormObject,
@@ -34,9 +31,12 @@ import {
   useFormSuccessHandler,
   useHasFormValueChanged,
 } from '../../wca/FormBuilder/provider/FormObjectProvider';
-import { useInputUpdater } from '../../../lib/hooks/useInputState';
+import submitEventRegistration from '../api/registration/post/submit_registration';
 import { useRegistrationMutationErrorHandler, useUpdateRegistrationMutation } from '../lib/mutations';
+import { useRegistration } from '../lib/RegistrationProvider';
 import { useStepNavigation } from '../lib/StepNavigationProvider';
+import Processing from './Processing';
+import { showMessage } from './RegistrationMessage';
 
 const maxCommentLength = 240;
 

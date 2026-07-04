@@ -1,13 +1,13 @@
 import React, { useCallback, useMemo } from 'react';
 import { Grid, Label, Segment } from 'semantic-ui-react';
+import useLoadedData from '../../lib/hooks/useLoadedData';
 import I18n from '../../lib/i18n';
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import Errored from '../Requests/Errored';
 import Loading from '../Requests/Loading';
-import useLoadedData from '../../lib/hooks/useLoadedData';
 import UserBadge from '../UserBadge';
-import DelegatesTable from './DelegatesTable';
 import DelegatesOfSubregion from './DelegatesOfSubregion';
+import DelegatesTable from './DelegatesTable';
 
 export const ALL_REGIONS = {
   id: 'all',

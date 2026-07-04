@@ -1,15 +1,12 @@
+import _ from 'lodash';
+import { DateTime } from 'luxon';
 import React, { useState, useCallback } from 'react';
 
 import {
   Button, Checkbox, Header, Segment, Table,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import { DateTime } from 'luxon';
 import useLoadedData from '../../lib/hooks/useLoadedData';
 import useSaveAction from '../../lib/hooks/useSaveAction';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
-import RegionFlag from '../wca/RegionFlag';
 import {
   adminCheckUploadedResults,
   adminPostingCompetitionsUrl,
@@ -17,6 +14,9 @@ import {
   competitionUrl,
   viewUrls,
 } from '../../lib/requests/routes.js.erb';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import RegionFlag from '../wca/RegionFlag';
 
 function stateReducer(accumulated, current) {
   return { ...accumulated, [current.id]: current.posting_user !== undefined };

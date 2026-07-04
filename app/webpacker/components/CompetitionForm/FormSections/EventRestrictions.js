@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { Divider } from 'semantic-ui-react';
+import { useStore } from '../../../lib/providers/StoreProvider';
 import {
   InputBoolean,
   InputBooleanSelect,
@@ -7,10 +8,9 @@ import {
   InputSelect,
   InputTextArea,
 } from '../../wca/FormBuilder/input/FormInputs';
-import { useStore } from '../../../lib/providers/StoreProvider';
-import ConditionalSection from './ConditionalSection';
-import SubSection from '../../wca/FormBuilder/SubSection';
 import { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import SubSection from '../../wca/FormBuilder/SubSection';
+import ConditionalSection from './ConditionalSection';
 
 export default function EventRestrictions({
   isCloning = false,

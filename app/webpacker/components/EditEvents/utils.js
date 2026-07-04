@@ -1,6 +1,6 @@
-import { events, formats } from '../../lib/wca-data.js.erb';
-import { buildActivityCode, parseActivityCode } from '../../lib/utils/wcif';
 import { matchResult, pluralize } from '../../lib/utils/edit-events';
+import { buildActivityCode, parseActivityCode } from '../../lib/utils/wcif';
+import { events, formats } from '../../lib/wca-data.js.erb';
 
 const DEFAULT_TIME_LIMIT = {
   centiseconds: 10 * 60 * 100,

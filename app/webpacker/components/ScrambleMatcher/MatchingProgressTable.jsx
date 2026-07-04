@@ -1,13 +1,13 @@
+import React, { useCallback } from 'react';
 import {
   Icon, List, Popup, Table,
 } from 'semantic-ui-react';
-import React, { useCallback } from 'react';
 import { shortLabelForActivityCode } from '../../lib/utils/wcif';
+import { events } from '../../lib/wca-data.js.erb';
 import {
   calculateRoundExpectedCount,
   calculateRoundMatchedCount, roundToRoundTypeName,
 } from './util';
-import { events } from '../../lib/wca-data.js.erb';
 
 function EventProgressRow({
   rowTitle,

@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormField, FormGroup, Radio } from 'semantic-ui-react';
+import useInputState from '../../../../lib/hooks/useInputState';
 import AdminWcaSearch from '../../../SearchWidget/AdminWcaSearch';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import useInputState from '../../../../lib/hooks/useInputState';
 import AnonymizationTicketWorkbenchForWrt from '../../../Tickets/TicketWorkbenches/AnonymizationTicketWorkbenchForWrt';
 
 const AVAILABLE_MODELS = [

@@ -1,21 +1,21 @@
+import _ from 'lodash';
 import React, { useMemo, useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import {
   Form, FormGroup, FormField, Button, Radio, Message,
 } from 'semantic-ui-react';
-import ReCAPTCHA from 'react-google-recaptcha';
-import _ from 'lodash';
-import { contactUrl, contactEditProfileActionUrl, contactEditOthersProfileActionUrl } from '../../lib/requests/routes.js.erb';
 import useSaveAction from '../../lib/hooks/useSaveAction';
 import I18n from '../../lib/i18n';
-import UserData from './UserData';
-import Loading from '../Requests/Loading';
 import { useDispatch, useStore } from '../../lib/providers/StoreProvider';
+import { contactUrl, contactEditProfileActionUrl, contactEditOthersProfileActionUrl } from '../../lib/requests/routes.js.erb';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
 import { clearForm, updateContactRecipient } from './store/actions';
+import Competition from './SubForms/Competition';
 import Wct from './SubForms/Wct';
 import Wrt from './SubForms/Wrt';
 import Wst from './SubForms/Wst';
-import Competition from './SubForms/Competition';
-import Errored from '../Requests/Errored';
+import UserData from './UserData';
 
 const CONTACT_RECIPIENTS = [
   'competition',

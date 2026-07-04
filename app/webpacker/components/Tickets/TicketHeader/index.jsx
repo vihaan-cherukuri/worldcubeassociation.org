@@ -1,9 +1,9 @@
+import _ from 'lodash';
 import React from 'react';
 import { Card, Header } from 'semantic-ui-react';
-import _ from 'lodash';
-import { ticketTypes } from '../../../lib/wca-data.js.erb';
 import I18n from '../../../lib/i18n';
 import { personUrl, competitionUrl } from '../../../lib/requests/routes.js.erb';
+import { ticketTypes } from '../../../lib/wca-data.js.erb';
 
 // let i18n-tasks know the key is used
 // i18n-tasks-use t('tickets.type.edit_person')

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Dropdown } from 'semantic-ui-react';
 
-import CompetitionItem from './CompetitionItem';
-import IncidentItem from './IncidentItem';
-import RegulationItem from './RegulationItem';
-import UserItem from './UserItem';
-import TextItem from './TextItem';
 import useDebounce from '../../lib/hooks/useDebounce';
 import I18n from '../../lib/i18n';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
+import CompetitionItem from './CompetitionItem';
+import IncidentItem from './IncidentItem';
+import RegulationItem from './RegulationItem';
+import TextItem from './TextItem';
+import UserItem from './UserItem';
 import '../../stylesheets/search_widget/MultisearchInput.scss';
 import UserRoleItem from './UserRoleItem';
 

@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import { Table } from 'semantic-ui-react';
 import React from 'react';
+import { Table } from 'semantic-ui-react';
 import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
 import I18n from '../../../lib/i18n';
 

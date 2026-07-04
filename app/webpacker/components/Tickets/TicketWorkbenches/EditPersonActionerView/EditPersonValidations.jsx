@@ -1,9 +1,9 @@
+import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Message } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
 import I18n from '../../../../lib/i18n';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 import getEditPersonValidators from '../../api/editPerson/getEditPersonValidators';
 
 export default function EditPersonValidations({ ticketDetails }) {

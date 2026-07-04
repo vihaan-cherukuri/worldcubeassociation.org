@@ -3,10 +3,10 @@ import { useOnInView } from 'react-intersection-observer';
 
 import { Container } from 'semantic-ui-react';
 import I18n from '../../lib/i18n';
+import { isInProgress, isProbablyOver } from '../../lib/utils/competition-table';
 import { competitionConstants } from '../../lib/wca-data.js.erb';
 
 import ListViewSection from './ListViewSection';
-import { isInProgress, isProbablyOver } from '../../lib/utils/competition-table';
 
 function ListView({
   competitions,

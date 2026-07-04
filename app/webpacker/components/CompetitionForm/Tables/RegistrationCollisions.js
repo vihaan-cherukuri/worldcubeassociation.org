@@ -4,14 +4,14 @@ import React, { useMemo } from 'react';
 import {
   Table, Message, Button, Popup,
 } from 'semantic-ui-react';
-import I18n from '../../../lib/i18n';
-import Loading from '../../Requests/Loading';
-import TableWrapper from './TableWrapper';
-import { registrationCollisionsJsonUrl } from '../../../lib/requests/routes.js.erb';
-import { events } from '../../../lib/wca-data.js.erb';
 import useLoadedData from '../../../lib/hooks/useLoadedData';
 import useToggleState from '../../../lib/hooks/useToggleState';
+import I18n from '../../../lib/i18n';
+import { registrationCollisionsJsonUrl } from '../../../lib/requests/routes.js.erb';
+import { events } from '../../../lib/wca-data.js.erb';
+import Loading from '../../Requests/Loading';
 import { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import TableWrapper from './TableWrapper';
 
 function NotConfirmedIcon() {
   return (

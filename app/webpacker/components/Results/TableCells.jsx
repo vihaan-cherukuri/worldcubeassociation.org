@@ -1,9 +1,9 @@
 import React from 'react';
 import { Table } from 'semantic-ui-react';
-import EventIcon from '../wca/EventIcon';
 import { competitionUrl, personUrl } from '../../lib/requests/routes.js.erb';
-import { formatAttemptResult } from '../../lib/wca-live/attempts';
 import { events } from '../../lib/wca-data.js.erb';
+import { formatAttemptResult } from '../../lib/wca-live/attempts';
+import EventIcon from '../wca/EventIcon';
 import RegionFlag from '../wca/RegionFlag';
 
 export function CountryCell({ country }) {

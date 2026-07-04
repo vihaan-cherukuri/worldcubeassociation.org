@@ -9,19 +9,19 @@ import {
   Menu,
   Segment,
 } from 'semantic-ui-react';
+import useHash from '../../lib/hooks/useHash';
+import useLoadedData from '../../lib/hooks/useLoadedData';
+import useLoggedInUserPermissions from '../../lib/hooks/useLoggedInUserPermissions';
 import I18n from '../../lib/i18n';
 
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import '../../stylesheets/delegates/style.scss';
+import { groupTypes } from '../../lib/wca-data.js.erb';
 import I18nHTMLTranslate from '../I18nHTMLTranslate';
-import useLoadedData from '../../lib/hooks/useLoadedData';
 import Errored from '../Requests/Errored';
 import Loading from '../Requests/Loading';
-import useLoggedInUserPermissions from '../../lib/hooks/useLoggedInUserPermissions';
-import { groupTypes } from '../../lib/wca-data.js.erb';
-import DelegatesOfRegion, { ALL_REGIONS } from './DelegatesOfRegion';
-import useHash from '../../lib/hooks/useHash';
 import DelegatesOfAllRegion from './DelegatesOfAllRegion';
+import DelegatesOfRegion, { ALL_REGIONS } from './DelegatesOfRegion';
 
 // let i18n-tasks know the key is used
 // i18n-tasks-use t('delegates_page.acknowledges')

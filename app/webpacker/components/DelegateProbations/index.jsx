@@ -1,6 +1,7 @@
-import React from 'react';
 import { DateTime } from 'luxon';
+import React from 'react';
 import useLoadedData from '../../lib/hooks/useLoadedData';
+import useLoggedInUserPermissions from '../../lib/hooks/useLoggedInUserPermissions';
 import useSaveAction from '../../lib/hooks/useSaveAction';
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../lib/wca-data.js.erb';
@@ -9,7 +10,6 @@ import Loading from '../Requests/Loading';
 
 import ProbationForm from './ProbationForm';
 import ProbationListTable from './ProbationListTable';
-import useLoggedInUserPermissions from '../../lib/hooks/useLoggedInUserPermissions';
 
 export default function DelegateProbations() {
   const {

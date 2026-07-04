@@ -1,4 +1,7 @@
+import _ from 'lodash';
 import React, { useCallback, useMemo } from 'react';
+import { Circle } from 'react-leaflet';
+import TextareaAutosize from 'react-textarea-autosize';
 import {
   Checkbox,
   Form,
@@ -6,25 +9,22 @@ import {
   Radio,
   Select,
 } from 'semantic-ui-react';
-import TextareaAutosize from 'react-textarea-autosize';
-import { Circle } from 'react-leaflet';
-import _ from 'lodash';
 import I18n from '../../../../lib/i18n';
-import MarkdownEditor from './MarkdownEditor';
-import AutonumericField from './AutonumericField';
-import { CompetitionsMap, DraggableMarker, StaticMarker } from './InputMap';
-import { AddChampionshipButton, ChampionshipSelect } from './InputChampionship';
-import UtcDatePicker from '../../UtcDatePicker';
-import { IdWcaSearch, useIdQueries } from '../../../SearchWidget/WcaSearch';
+import Loading from '../../../Requests/Loading';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch, useIdQueries } from '../../../SearchWidget/WcaSearch';
+import UtcDatePicker from '../../UtcDatePicker';
+import { useFormContext, useFormObjectSection, useFormUpdateAction } from '../provider/FormObjectProvider';
 import {
   readValueRecursive,
   useSectionAllowIgnoreDisabled,
   useSectionDisabled,
   useSections,
 } from '../provider/FormSectionProvider';
-import { useFormContext, useFormObjectSection, useFormUpdateAction } from '../provider/FormObjectProvider';
-import Loading from '../../../Requests/Loading';
+import AutonumericField from './AutonumericField';
+import { AddChampionshipButton, ChampionshipSelect } from './InputChampionship';
+import { CompetitionsMap, DraggableMarker, StaticMarker } from './InputMap';
+import MarkdownEditor from './MarkdownEditor';
 
 function snakifyId(id, section = []) {
   const idParts = [...section, id];

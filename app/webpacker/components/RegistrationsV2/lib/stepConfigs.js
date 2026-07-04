@@ -1,7 +1,7 @@
-import RegistrationRequirements from '../Register/RegistrationRequirements';
 import CompetingStep from '../Register/CompetingStep';
 import PaymentWrapper from '../Register/PaymentStepWrapper';
 import RegistrationOverview from '../Register/RegistrationOverview';
+import RegistrationRequirements from '../Register/RegistrationRequirements';
 
 export const requirementsStepConfig = {
   key: 'requirements',

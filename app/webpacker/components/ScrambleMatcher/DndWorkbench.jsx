@@ -1,6 +1,8 @@
-import React from 'react';
 import { DragDropContext } from '@hello-pangea/dnd';
+import React from 'react';
+import { parseActivityCode } from '../../lib/utils/wcif';
 import MatchingTable from './MatchingTable';
+import UnusedScramblesPanel from './UnusedScramblesPanel';
 import {
   DROPPABLE_ID_MATCHED_SCRAMBLES,
   DROPPABLE_ID_STORAGE,
@@ -8,8 +10,6 @@ import {
   unpackScrambleSets,
   unpackScrambleSetsInRound,
 } from './util';
-import UnusedScramblesPanel from './UnusedScramblesPanel';
-import { parseActivityCode } from '../../lib/utils/wcif';
 
 export default function DndWorkbench({
   selectedEvent,

@@ -1,12 +1,12 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
-import WarningsAndMessage from './WarningsAndMessage';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
-import verifyWarnings from '../../api/competitionResult/verify_warnings';
 import { updateTicketMetadata } from '../../../../lib/helpers/update-ticket-query-data';
+import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import verifyWarnings from '../../api/competitionResult/verify_warnings';
+import WarningsAndMessage from './WarningsAndMessage';
 
 export default function WarningsVerification({ ticketDetails, currentStakeholder }) {
   const { ticket: { id } } = ticketDetails;

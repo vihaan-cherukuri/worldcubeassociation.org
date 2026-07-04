@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Item } from 'semantic-ui-react';
-import WcaSearch from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import Loading from '../../../Requests/Loading';
 import useQueryParams from '../../../../lib/hooks/useQueryParams';
+import Loading from '../../../Requests/Loading';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import WcaSearch from '../../../SearchWidget/WcaSearch';
 import EditPersonForm from './EditPersonForm';
 
 export default function EditPersonPage() {

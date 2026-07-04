@@ -1,3 +1,7 @@
+import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
+import luxonPlugin, { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon3';
+import FullCalendar from '@fullcalendar/react';
+import timeGridPlugin from '@fullcalendar/timegrid';
 import React, {
   useCallback,
   useEffect,
@@ -18,24 +22,26 @@ import {
   Sticky,
 } from 'semantic-ui-react';
 
-import FullCalendar from '@fullcalendar/react';
-import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import luxonPlugin, { toLuxonDateTime, toLuxonDuration } from '@fullcalendar/luxon3';
-
-import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import useCheckboxState from '../../../lib/hooks/useCheckboxState';
 import useInputState from '../../../lib/hooks/useInputState';
-import ActivityPicker from './ActivityPicker';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
+import { earliestTimeOfDayWithBuffer, getHour, latestTimeOfDayWithBuffer } from '../../../lib/utils/activities';
+import { getTextColor } from '../../../lib/utils/calendar';
+import {
+  activityToFcTitle,
+  buildPartialActivityFromCode,
+  defaultDurationFromActivityCode, FC_ACTIVITY_ATTACHMENT,
+  fcEventToActivityAndDates,
+  luxonToWcifIso,
+} from '../../../lib/utils/edit-schedule';
+import { getTimeZoneDropdownLabel } from '../../../lib/utils/timezone';
 import {
   getMatchingActivities,
   isActivityTimeValid,
   roomWcifFromId,
   venueWcifFromRoomId,
 } from '../../../lib/utils/wcif';
-import { getTextColor } from '../../../lib/utils/calendar';
-import useCheckboxState from '../../../lib/hooks/useCheckboxState';
-
 import {
   addActivity,
   editActivity,
@@ -44,18 +50,10 @@ import {
   removeActivity,
   scaleActivity,
 } from '../store/actions';
-
-import {
-  activityToFcTitle,
-  buildPartialActivityFromCode,
-  defaultDurationFromActivityCode, FC_ACTIVITY_ATTACHMENT,
-  fcEventToActivityAndDates,
-  luxonToWcifIso,
-} from '../../../lib/utils/edit-schedule';
-import EditActivityModal from './EditActivityModal';
 import ActionsHeader from './ActionsHeader';
-import { getTimeZoneDropdownLabel } from '../../../lib/utils/timezone';
-import { earliestTimeOfDayWithBuffer, getHour, latestTimeOfDayWithBuffer } from '../../../lib/utils/activities';
+import ActivityPicker from './ActivityPicker';
+
+import EditActivityModal from './EditActivityModal';
 
 function EditActivities({
   wcifEvents,

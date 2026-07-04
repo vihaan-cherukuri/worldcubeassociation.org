@@ -1,9 +1,9 @@
 import React from 'react';
 import { Form, Header } from 'semantic-ui-react';
-import I18n from '../../lib/i18n';
-import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
 import useInputState from '../../lib/hooks/useInputState';
+import I18n from '../../lib/i18n';
 import { connectPaymentIntegrationUrl } from '../../lib/requests/routes.js.erb';
+import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
 
 function utf8ToBase64(str) {
   // The best solution would be to use https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64

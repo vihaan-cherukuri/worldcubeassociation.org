@@ -1,11 +1,11 @@
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import {
   Button, ButtonGroup, Form, Header, Segment,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import EventSelector from '../wca/EventSelector';
-import { countries } from '../../lib/wca-data.js.erb';
 import I18n from '../../lib/i18n';
+import { countries } from '../../lib/wca-data.js.erb';
+import EventSelector from '../wca/EventSelector';
 import RegionSelector, { ALL_REGIONS_VALUE } from '../wca/RegionSelector';
 
 function getRegionIdWithFallback(region) {

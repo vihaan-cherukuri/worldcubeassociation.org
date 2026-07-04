@@ -3,19 +3,19 @@ import {
   Header, Table, Button, Modal, Form, Message, Icon,
   Segment,
 } from 'semantic-ui-react';
-import { apiV0Urls, editUserAvatarUrl } from '../../../../lib/requests/routes.js.erb';
-import useLoadedData from '../../../../lib/hooks/useLoadedData';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
-import WcaSearch from '../../../SearchWidget/WcaSearch';
-import I18n from '../../../../lib/i18n';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
 import { nextStatusOfGroupType, previousStatusOfGroupType, statusObjectOfGroupType } from '../../../../lib/helpers/status-objects';
+import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import I18n from '../../../../lib/i18n';
+import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
+import { apiV0Urls, editUserAvatarUrl } from '../../../../lib/requests/routes.js.erb';
 import { delegateRegionsStatus } from '../../../../lib/wca-data.js.erb';
-import LocationEditorModal from './LocationEditorModal';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import WcaSearch from '../../../SearchWidget/WcaSearch';
 import CreateModal from '../../views/UserRoles/CreateModal';
+import LocationEditorModal from './LocationEditorModal';
 
 const delegateStatusOptions = [
   delegateRegionsStatus.trainee_delegate,

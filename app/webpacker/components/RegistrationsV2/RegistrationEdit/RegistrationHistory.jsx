@@ -1,16 +1,16 @@
+import { useQuery } from '@tanstack/react-query';
+import _ from 'lodash';
 import React from 'react';
 import {
   Button, Header, Popup, Table,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import _ from 'lodash';
+import I18n from '../../../lib/i18n';
 import { getIsoDateString, getShortTimeString, getTimeWithSecondsString } from '../../../lib/utils/dates';
 import { events } from '../../../lib/wca-data.js.erb';
-import EventIcon from '../../wca/EventIcon';
-import I18n from '../../../lib/i18n';
-import getUsersInfo from '../api/user/post/getUserInfo';
 import Loading from '../../Requests/Loading';
+import EventIcon from '../../wca/EventIcon';
 import { getRegistrationHistory } from '../api/registration/get/get_registrations';
+import getUsersInfo from '../api/user/post/getUserInfo';
 
 export default function RegistrationHistory({ registrationId }) {
   const {

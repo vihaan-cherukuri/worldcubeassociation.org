@@ -1,5 +1,5 @@
-import { useCallback, useReducer } from 'react';
 import _ from 'lodash';
+import { useCallback, useReducer } from 'react';
 
 const reducer = (state, {
   type, array, elements,

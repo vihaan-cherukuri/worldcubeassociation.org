@@ -1,17 +1,17 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import {
   Header, Input, Pagination, Table,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import I18n from '../../../lib/i18n';
 import useDebounce from '../../../lib/hooks/useDebounce';
-import { getPersons } from '../api/getPersons';
-import Loading from '../../Requests/Loading';
+import useInputState from '../../../lib/hooks/useInputState';
+import I18n from '../../../lib/i18n';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
 import { personUrl } from '../../../lib/requests/routes.js.erb';
 import { countries } from '../../../lib/wca-data.js.erb';
+import Loading from '../../Requests/Loading';
 import RegionSelector, { ALL_REGIONS_VALUE } from '../../wca/RegionSelector';
-import useInputState from '../../../lib/hooks/useInputState';
+import { getPersons } from '../api/getPersons';
 
 export default function Wrapper() {
   return (

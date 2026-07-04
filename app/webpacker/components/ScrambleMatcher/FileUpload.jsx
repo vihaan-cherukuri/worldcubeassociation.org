@@ -1,3 +1,4 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, {
   useCallback,
   useRef,
@@ -9,12 +10,11 @@ import {
   Message,
   Popup,
 } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import useToggleButtonState from '../../lib/hooks/useToggleButtonState';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { competitionScrambleFilesUrl } from '../../lib/requests/routes.js.erb';
 import ScrambleFileList from './ScrambleFileList';
 import { sortSetsForAutoMatch, unpackScrambleSets, useScrambleFilesQuery } from './util';
-import useToggleButtonState from '../../lib/hooks/useToggleButtonState';
 
 async function uploadScrambleFile({ competitionId, file }) {
   const formData = new FormData();

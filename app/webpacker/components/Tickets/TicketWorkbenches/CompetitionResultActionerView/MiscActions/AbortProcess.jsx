@@ -1,10 +1,10 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Button, Confirm, Popup } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { ticketsCompetitionResultStatuses } from '../../../../../lib/wca-data.js.erb';
-import clearResultsSubmission from '../../../api/competitionResult/clearResultsSubmission';
-import Loading from '../../../../Requests/Loading';
 import Errored from '../../../../Requests/Errored';
+import Loading from '../../../../Requests/Loading';
+import clearResultsSubmission from '../../../api/competitionResult/clearResultsSubmission';
 
 export default function AbortProcess({ ticketDetails }) {
   const { ticket: { id, metadata: { status, competition_id: competitionId } } } = ticketDetails;

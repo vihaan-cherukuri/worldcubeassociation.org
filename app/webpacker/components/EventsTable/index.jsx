@@ -8,7 +8,6 @@ import {
   TableRow,
 } from 'semantic-ui-react';
 import I18n from '../../lib/i18n';
-import { events, formats } from '../../lib/wca-data.js.erb';
 import {
   advancementConditionToString,
   cutoffToString,
@@ -16,6 +15,7 @@ import {
   getRoundTypeId,
   timeLimitToString,
 } from '../../lib/utils/wcif';
+import { events, formats } from '../../lib/wca-data.js.erb';
 
 export default function EventsTable({ competitionInfo, wcifEvents }) {
   const determineH2hfinal = useCallback((roundTypeId, roundId) => (competitionInfo.h2h_rounds.includes(roundId) && roundTypeId === 'f'), [competitionInfo.h2h_rounds]);

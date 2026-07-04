@@ -3,8 +3,8 @@ import {
   Accordion, Container, Message, Tab,
 } from 'semantic-ui-react';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
-import UploadResultsJson from './UploadResultsJson';
 import ImportWcaLiveResults from './ImportWcaLiveResults';
+import UploadResultsJson from './UploadResultsJson';
 
 export default function Wrapper({
   competitionId,

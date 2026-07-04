@@ -1,11 +1,11 @@
+import _ from 'lodash';
 import React, { useState, useCallback } from 'react';
 import { Form } from 'semantic-ui-react';
-import _ from 'lodash';
-import { SKIPPED_VALUE } from '../../../../lib/wca-live/attempts';
 import {
   attemptResultToMbPoints,
   mbPointsToAttemptResultWithUnknownTime,
 } from '../../../../lib/utils/edit-events';
+import { SKIPPED_VALUE } from '../../../../lib/wca-live/attempts';
 
 const MAX_POINTS = 99;
 

@@ -1,11 +1,11 @@
+import _ from 'lodash';
 import React from 'react';
 
-import _ from 'lodash';
 import useLoadedData from '../../../lib/hooks/useLoadedData';
 import { competitionUrl } from '../../../lib/requests/routes.js.erb';
 
-import Loading from '../../Requests/Loading';
 import Errored from '../../Requests/Errored';
+import Loading from '../../Requests/Loading';
 
 function EditEntry({
   id,

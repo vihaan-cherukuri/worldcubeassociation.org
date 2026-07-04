@@ -1,8 +1,8 @@
+import { toLuxonDateTime } from '@fullcalendar/luxon3';
 import _ from 'lodash';
 import { DateTime, Duration } from 'luxon';
-import { toLuxonDateTime } from '@fullcalendar/luxon3';
-import { humanizeActivityCode, parseActivityCode } from './wcif';
 import { DEFAULT_LOCALE, withLocale } from '../i18n';
+import { humanizeActivityCode, parseActivityCode } from './wcif';
 
 export function toMicrodegrees(coord) {
   const result = Math.trunc(parseFloat(coord) * 1e6);

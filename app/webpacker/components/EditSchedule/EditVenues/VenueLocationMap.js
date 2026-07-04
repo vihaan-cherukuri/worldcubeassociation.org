@@ -12,11 +12,11 @@ import {
   TileLayer,
   useMap,
 } from 'react-leaflet';
-import { toDegrees, toMicrodegrees } from '../../../lib/utils/edit-schedule';
 import { userTileProvider } from '../../../lib/leaflet-wca/providers';
 import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { editVenue } from '../store/actions';
+import { toDegrees, toMicrodegrees } from '../../../lib/utils/edit-schedule';
 import ResizeMapIFrame from '../../../lib/utils/leaflet-iframe';
+import { editVenue } from '../store/actions';
 
 function GeoSearchControl({
   onGeoSearchResult,

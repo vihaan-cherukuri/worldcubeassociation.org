@@ -3,14 +3,14 @@ import {
   Button, Checkbox, Icon, Table,
 } from 'semantic-ui-react';
 import useLoadedData from '../../lib/hooks/useLoadedData';
-import Loading from '../Requests/Loading';
+import I18n from '../../lib/i18n';
+import { competitionApiUrl } from '../../lib/requests/routes.js.erb';
+import { getUrlParams, setUrlParams } from '../../lib/utils/wca';
+import { localizeRoundInformation } from '../../lib/utils/wcif';
 import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
 import '../../stylesheets/competition_results.scss';
 import EventNavigation from './EventNavigation';
-import { getUrlParams, setUrlParams } from '../../lib/utils/wca';
-import { competitionApiUrl } from '../../lib/requests/routes.js.erb';
-import { localizeRoundInformation } from '../../lib/utils/wcif';
-import I18n from '../../lib/i18n';
 
 function RoundResultsTable({
   competitionId,

@@ -1,6 +1,6 @@
+import classnames from 'classnames';
 import React from 'react';
 import { Popup } from 'semantic-ui-react';
-import classnames from 'classnames';
 import { countries } from '../../lib/wca-data.js.erb';
 
 /** Works with countries, continents, and world. */

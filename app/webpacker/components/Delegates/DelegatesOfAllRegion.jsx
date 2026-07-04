@@ -1,14 +1,14 @@
 import React, { useMemo } from 'react';
-import { Header } from 'semantic-ui-react';
 import { CSVLink } from 'react-csv';
-import DelegatesTable from './DelegatesTable';
+import { Header } from 'semantic-ui-react';
+import dateSince from '../../lib/helpers/date-since';
 import useLoadedData from '../../lib/hooks/useLoadedData';
+import I18n from '../../lib/i18n';
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../lib/wca-data.js.erb';
-import Loading from '../Requests/Loading';
 import Errored from '../Requests/Errored';
-import I18n from '../../lib/i18n';
-import dateSince from '../../lib/helpers/date-since';
+import Loading from '../Requests/Loading';
+import DelegatesTable from './DelegatesTable';
 
 const otherDelegatesHeaders = [
   { label: 'Delegate Name', key: 'user.name' },

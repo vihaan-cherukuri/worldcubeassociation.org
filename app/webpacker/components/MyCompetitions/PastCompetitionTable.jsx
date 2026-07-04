@@ -1,12 +1,12 @@
+import React from 'react';
 import {
   Icon, Message, Popup, Table,
 } from 'semantic-ui-react';
-import React from 'react';
 import I18n from '../../lib/i18n';
+import I18nHTMLTranslate from '../I18nHTMLTranslate';
 import {
   DateTableCell, LocationTableCell, NameTableCell, ReportTableCell,
 } from './TableCells';
-import I18nHTMLTranslate from '../I18nHTMLTranslate';
 
 export default function PastCompetitionsTable({
   competitions,

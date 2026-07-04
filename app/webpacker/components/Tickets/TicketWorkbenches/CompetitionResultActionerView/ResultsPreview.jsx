@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useMemo, useState } from 'react';
 import _ from 'lodash';
+import React, { useMemo, useState } from 'react';
 import { Accordion, Message } from 'semantic-ui-react';
-import getImportedTemporaryResults from '../../api/competitionResult/getImportedTemporaryResults';
+import WCAQueryClientProvider from '../../../../lib/providers/WCAQueryClientProvider';
 import Errored from '../../../Requests/Errored';
 import Loading from '../../../Requests/Loading';
-import WCAQueryClientProvider from '../../../../lib/providers/WCAQueryClientProvider';
+import getImportedTemporaryResults from '../../api/competitionResult/getImportedTemporaryResults';
 import ResultsPreviewAccordion from './ResultsPreviewAccordion';
 
 export default function Wrapper({ competitionId }) {

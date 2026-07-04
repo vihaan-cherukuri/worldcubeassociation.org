@@ -1,11 +1,11 @@
 import React from 'react';
-import { ticketStatuses, PANEL_PAGES } from '../../../../lib/wca-data.js.erb';
 import { panelPageUrl } from '../../../../lib/requests/routes.js.erb';
-import EditPersonValidations from './EditPersonValidations';
-import EditPersonRequestedChanges from './EditPersonRequestedChanges';
-import RejectView from './RejectView';
-import OldDataSyncInfo from './OldDataSyncInfo';
+import { ticketStatuses, PANEL_PAGES } from '../../../../lib/wca-data.js.erb';
 import ApproveView from './ApproveView';
+import EditPersonRequestedChanges from './EditPersonRequestedChanges';
+import EditPersonValidations from './EditPersonValidations';
+import OldDataSyncInfo from './OldDataSyncInfo';
+import RejectView from './RejectView';
 
 export default function EditPersonActionerView({ ticketDetails, currentStakeholder }) {
   const { ticket: { id, metadata } } = ticketDetails;

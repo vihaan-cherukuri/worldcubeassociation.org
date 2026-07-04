@@ -1,12 +1,12 @@
-import React from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import React from 'react';
 import { Button, List } from 'semantic-ui-react';
-import getInboxPersonSummary from '../../api/competitionResult/getInboxPersonSummary';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
 import { viewUrls } from '../../../../lib/requests/routes.js.erb';
 import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 import deleteInboxPersons from '../../api/competitionResult/deleteInboxPersons';
+import getInboxPersonSummary from '../../api/competitionResult/getInboxPersonSummary';
 
 export default function CreateWcaIds({ ticketDetails }) {
   const { ticket: { id, metadata: { competition_id: competitionId } } } = ticketDetails;

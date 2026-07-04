@@ -3,9 +3,9 @@ import React from 'react';
 import {
   Button, Table, Message, Popup, TableCell,
 } from 'semantic-ui-react';
+import useToggleState from '../../../lib/hooks/useToggleState';
 import I18n from '../../../lib/i18n';
 import { events } from '../../../lib/wca-data.js.erb';
-import useToggleState from '../../../lib/hooks/useToggleState';
 import { useSectionDisabled } from '../../wca/FormBuilder/provider/FormSectionProvider';
 
 function NotConfirmedIcon() {

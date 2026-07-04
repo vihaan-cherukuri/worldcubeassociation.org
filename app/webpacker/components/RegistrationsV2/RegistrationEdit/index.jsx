@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import { Sticky } from 'semantic-ui-react';
-import RegistrationEditor from './RegistrationEditor';
-import RegistrationMessage from '../Register/RegistrationMessage';
-import messageReducer from '../reducers/messageReducer';
+import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
 import StoreProvider from '../../../lib/providers/StoreProvider';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
-import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
-import RegistrationProvider, { useRegistration } from '../lib/RegistrationProvider';
-import FormObjectProvider from '../../wca/FormBuilder/provider/FormObjectProvider';
 import Loading from '../../Requests/Loading';
+import FormObjectProvider from '../../wca/FormBuilder/provider/FormObjectProvider';
+import RegistrationProvider, { useRegistration } from '../lib/RegistrationProvider';
+import messageReducer from '../reducers/messageReducer';
+import RegistrationMessage from '../Register/RegistrationMessage';
+import RegistrationEditor from './RegistrationEditor';
 
 export default function RegistrationEdit({ registrationId, competitionInfo, user }) {
   const ref = useRef();

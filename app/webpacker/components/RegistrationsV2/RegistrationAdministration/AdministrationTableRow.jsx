@@ -1,19 +1,19 @@
+import { Draggable } from '@hello-pangea/dnd';
+import React from 'react';
 import {
   Checkbox, Icon, Popup, Ref, Table,
 } from 'semantic-ui-react';
-import React from 'react';
-import { Draggable } from '@hello-pangea/dnd';
-import { showMessage } from '../Register/RegistrationMessage';
+import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
 import I18n from '../../../lib/i18n';
+import { editRegistrationUrl, editPersonUrl, personUrl } from '../../../lib/requests/routes.js.erb';
 import {
   getRegistrationTimestamp,
   getShortDateString,
 } from '../../../lib/utils/dates';
-import EventIcon from '../../wca/EventIcon';
-import { editRegistrationUrl, editPersonUrl, personUrl } from '../../../lib/requests/routes.js.erb';
-import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
 import { countries } from '../../../lib/wca-data.js.erb';
+import EventIcon from '../../wca/EventIcon';
 import RegionFlag from '../../wca/RegionFlag';
+import { showMessage } from '../Register/RegistrationMessage';
 
 // Semantic Table only allows truncating _all_ columns in a table in
 // single line fixed mode. As we only want to truncate the comment/admin notes

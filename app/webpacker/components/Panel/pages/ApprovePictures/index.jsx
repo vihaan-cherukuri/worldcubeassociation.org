@@ -1,3 +1,4 @@
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
 import {
   CardGroup,
@@ -5,13 +6,12 @@ import {
   List,
   Segment,
 } from 'semantic-ui-react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import I18n from '../../../../lib/i18n';
-import AvatarCard from './AvatarCard';
-import updateAvatars from './api/updateAvatars';
 import WCAQueryClientProvider from '../../../../lib/providers/WCAQueryClientProvider';
-import getPendingAvatarUsers from './api/getPendingAvatarUsers';
 import Loading from '../../../Requests/Loading';
+import getPendingAvatarUsers from './api/getPendingAvatarUsers';
+import updateAvatars from './api/updateAvatars';
+import AvatarCard from './AvatarCard';
 
 export default function Wrapper() {
   return (

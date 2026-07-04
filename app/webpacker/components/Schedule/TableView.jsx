@@ -1,9 +1,11 @@
+import cn from 'classnames';
 import { DateTime } from 'luxon';
 import React from 'react';
 import {
   Checkbox, Grid, Header, Icon, Segment,
 } from 'semantic-ui-react';
-import cn from 'classnames';
+import useStoredState from '../../lib/hooks/useStoredState';
+import I18n from '../../lib/i18n';
 import {
   activitiesOnDate,
   earliestWithLongestTieBreaker,
@@ -15,16 +17,14 @@ import {
 } from '../../lib/utils/activities';
 import { getSimpleTimeString } from '../../lib/utils/dates';
 import { toDegrees } from '../../lib/utils/edit-schedule';
-import AddToCalendar from './AddToCalendar';
-import useStoredState from '../../lib/hooks/useStoredState';
-import I18n from '../../lib/i18n';
-import { formats } from '../../lib/wca-data.js.erb';
 import {
   parseActivityCode,
   timeLimitToString,
   advancementConditionToString,
   cutoffToString,
 } from '../../lib/utils/wcif';
+import { formats } from '../../lib/wca-data.js.erb';
+import AddToCalendar from './AddToCalendar';
 import '../../stylesheets/schedule_events.scss';
 
 export default function TableView({

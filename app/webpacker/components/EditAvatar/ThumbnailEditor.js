@@ -1,4 +1,10 @@
 import React, { useMemo, useState } from 'react';
+import ReactCrop, {
+  centerCrop,
+  convertToPercentCrop,
+  convertToPixelCrop,
+  makeAspectCrop,
+} from 'react-image-crop';
 import {
   Button,
   Container,
@@ -9,12 +15,6 @@ import {
   Message,
   Popup,
 } from 'semantic-ui-react';
-import ReactCrop, {
-  centerCrop,
-  convertToPercentCrop,
-  convertToPixelCrop,
-  makeAspectCrop,
-} from 'react-image-crop';
 import I18n from '../../lib/i18n';
 import CroppedImage from './CroppedImage';
 

@@ -3,21 +3,21 @@ import {
   Elements, PaymentElement, useElements, useStripe,
 } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
+import { useQuery } from '@tanstack/react-query';
 import React, { useMemo, useState } from 'react';
 import {
   Button, Checkbox, Divider, Form, FormField, Header, Label, Message, Segment,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
+import useCheckboxState from '../../../lib/hooks/useCheckboxState';
 import I18n from '../../../lib/i18n';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
 import { paymentDenominationUrl, paymentFinishUrl } from '../../../lib/requests/routes.js.erb';
-import { useRegistration } from '../lib/RegistrationProvider';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import useCheckboxState from '../../../lib/hooks/useCheckboxState';
-import getPaymentTicket from '../api/payment/get/getPaymentTicket';
-import { showMessage } from './RegistrationMessage';
-import AutonumericField from '../../wca/FormBuilder/input/AutonumericField';
 import Loading from '../../Requests/Loading';
+import AutonumericField from '../../wca/FormBuilder/input/AutonumericField';
+import getPaymentTicket from '../api/payment/get/getPaymentTicket';
+import { useRegistration } from '../lib/RegistrationProvider';
+import { showMessage } from './RegistrationMessage';
 
 const convertISOAmount = async (competitionId, userId, isoDonationAmount) => {
   const { data } = await fetchJsonOrError(

@@ -1,4 +1,17 @@
 import {
+  copyActivity, copyRoom, copyVenue, nextActivityId, nextRoomId, nextVenueId,
+} from '../../../lib/utils/edit-schedule';
+import {
+  activityWcifFromId,
+  doActivitiesMatch,
+  roomWcifFromId,
+  venueWcifFromRoomId,
+} from '../../../lib/utils/wcif';
+import { defaultRoomColor } from '../../../lib/wca-data.js.erb';
+import {
+  changeActivityTimezone, moveActivityByDuration, scaleActivitiesByDuration,
+} from '../utils';
+import {
   AddActivity,
   AddRoom,
   AddVenue,
@@ -16,19 +29,6 @@ import {
   RemoveVenue,
   ScaleActivity,
 } from './actions';
-import {
-  copyActivity, copyRoom, copyVenue, nextActivityId, nextRoomId, nextVenueId,
-} from '../../../lib/utils/edit-schedule';
-import {
-  changeActivityTimezone, moveActivityByDuration, scaleActivitiesByDuration,
-} from '../utils';
-import {
-  activityWcifFromId,
-  doActivitiesMatch,
-  roomWcifFromId,
-  venueWcifFromRoomId,
-} from '../../../lib/utils/wcif';
-import { defaultRoomColor } from '../../../lib/wca-data.js.erb';
 
 const reducers = {
   [ChangesSaved]: (state) => ({

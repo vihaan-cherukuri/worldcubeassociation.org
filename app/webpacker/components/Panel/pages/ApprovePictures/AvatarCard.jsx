@@ -10,9 +10,9 @@ import {
   Checkbox,
   Input,
 } from 'semantic-ui-react';
-import { editPersonUrl } from '../../../../lib/requests/routes.js.erb';
-import I18n from '../../../../lib/i18n';
 import useInputState from '../../../../lib/hooks/useInputState';
+import I18n from '../../../../lib/i18n';
+import { editPersonUrl } from '../../../../lib/requests/routes.js.erb';
 
 function Avatar({
   title, actions, imageUrl,

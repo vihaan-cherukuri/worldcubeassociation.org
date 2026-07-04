@@ -9,19 +9,19 @@ import {
   Message,
 } from 'semantic-ui-react';
 
+import useCheckboxState from '../../lib/hooks/useCheckboxState';
+import useLoadedData from '../../lib/hooks/useLoadedData';
+import useSaveAction from '../../lib/hooks/useSaveAction';
 import I18n from '../../lib/i18n';
 
+import { userAvatarDataUrl, panelUrls } from '../../lib/requests/routes.js.erb';
+import { avatarImageTypes } from '../../lib/wca-data.js.erb';
+import Errored from '../Requests/Errored';
+import UserAvatar from '../UserAvatar';
 import ImageUpload from './ImageUpload';
 
 import 'react-image-crop/dist/ReactCrop.css';
 import ThumbnailEditor from './ThumbnailEditor';
-import useLoadedData from '../../lib/hooks/useLoadedData';
-import { userAvatarDataUrl, panelUrls } from '../../lib/requests/routes.js.erb';
-import Errored from '../Requests/Errored';
-import useSaveAction from '../../lib/hooks/useSaveAction';
-import UserAvatar from '../UserAvatar';
-import useCheckboxState from '../../lib/hooks/useCheckboxState';
-import { avatarImageTypes } from '../../lib/wca-data.js.erb';
 
 function EditAvatar({
   userId,

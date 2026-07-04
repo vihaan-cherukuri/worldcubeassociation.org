@@ -1,11 +1,14 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useCallback } from 'react';
 import {
   Accordion, Breadcrumb, Button, Header, Icon, Popup, Table,
 } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { scrambleFileUrl } from '../../lib/requests/routes.js.erb';
+import { getFullDateTimeString } from '../../lib/utils/dates';
+import { events } from '../../lib/wca-data.js.erb';
 import Loading from '../Requests/Loading';
+import { useMoveScrambleSetModal } from './MoveScrambleSetModal';
 import {
   ATTEMPTS_UNPACKING_MARKER,
   autoMatchSearch, calculateBestInsertIndex, filterUnusedScrambles,
@@ -15,9 +18,6 @@ import {
   searchRecursive, sortSetsForAutoMatch, unpackMatchingState,
   unpackScrambleSets,
 } from './util';
-import { events } from '../../lib/wca-data.js.erb';
-import { getFullDateTimeString } from '../../lib/utils/dates';
-import { useMoveScrambleSetModal } from './MoveScrambleSetModal';
 
 async function deleteScrambleFile({ fileId }) {
   const { data } = await fetchJsonOrError(scrambleFileUrl(fileId), {

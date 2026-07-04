@@ -3,13 +3,13 @@ import {
   Button, ButtonGroup, Confirm, Form, Header, Icon, List, Modal, Table,
 } from 'semantic-ui-react';
 import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
 import {
   fetchUserGroupsUrl, addUserGroupsUrl, userGroupsUpdateUrl,
 } from '../../../../lib/requests/routes.js.erb';
 import { delegateRegionsStatus } from '../../../../lib/wca-data.js.erb';
 import Errored from '../../../Requests/Errored';
 import Loading from '../../../Requests/Loading';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
 import CreateModal from '../../views/UserRoles/CreateModal';
 
 const defaultRegion = {

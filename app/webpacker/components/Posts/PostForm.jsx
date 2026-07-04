@@ -1,18 +1,18 @@
+import { useMutation } from '@tanstack/react-query';
 import React, {
   useCallback, useMemo, useState,
 } from 'react';
 import {
   Button, Checkbox, Form, FormField, FormGroup, Header, Message,
 } from 'semantic-ui-react';
-import { useMutation } from '@tanstack/react-query';
-import I18n from '../../lib/i18n';
-import useInputState from '../../lib/hooks/useInputState';
 import useCheckboxState from '../../lib/hooks/useCheckboxState';
-import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
-import { createPost, editPost } from './api/posts';
-import UtcDatePicker from '../wca/UtcDatePicker';
-import I18nHTMLTranslate from '../I18nHTMLTranslate';
+import useInputState from '../../lib/hooks/useInputState';
 import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
+import I18n from '../../lib/i18n';
+import I18nHTMLTranslate from '../I18nHTMLTranslate';
+import MarkdownEditor from '../wca/FormBuilder/input/MarkdownEditor';
+import UtcDatePicker from '../wca/UtcDatePicker';
+import { createPost, editPost } from './api/posts';
 
 export default function PostForm({
   header, allTags, post,

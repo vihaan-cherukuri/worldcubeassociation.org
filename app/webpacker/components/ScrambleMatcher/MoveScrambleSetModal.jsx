@@ -3,8 +3,8 @@ import React, {
 } from 'react';
 import { Button, Form, Modal } from 'semantic-ui-react';
 import { useInputUpdater } from '../../lib/hooks/useInputState';
-import { LEGAL_CROSS_MATCHES, roundToRoundTypeName, scrambleSetToTitle } from './util';
 import { events } from '../../lib/wca-data.js.erb';
+import { LEGAL_CROSS_MATCHES, roundToRoundTypeName, scrambleSetToTitle } from './util';
 
 const MoveModalContext = createContext();
 

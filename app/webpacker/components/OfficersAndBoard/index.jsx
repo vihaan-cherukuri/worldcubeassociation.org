@@ -1,14 +1,14 @@
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import { Container, Header } from 'semantic-ui-react';
-import _ from 'lodash';
+import useLoadedData from '../../lib/hooks/useLoadedData';
+import I18n from '../../lib/i18n';
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../lib/wca-data.js.erb';
-import I18n from '../../lib/i18n';
-import useLoadedData from '../../lib/hooks/useLoadedData';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
-import UserBadge from '../UserBadge';
 import EmailButton from '../EmailButton';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import UserBadge from '../UserBadge';
 
 export default function OfficersAndBoard() {
   const { data: officers, loading: officersLoading, error: officersError } = useLoadedData(

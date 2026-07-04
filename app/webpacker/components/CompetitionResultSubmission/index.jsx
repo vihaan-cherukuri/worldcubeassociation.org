@@ -1,8 +1,8 @@
 import React from 'react';
 import { List, Message } from 'semantic-ui-react';
-import { ImportResultsData } from './ImportResultsData';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
 import FormToWrt from './FormToWrt';
+import { ImportResultsData } from './ImportResultsData';
 
 export default function Wrapper({
   competitionId,

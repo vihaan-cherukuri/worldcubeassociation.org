@@ -1,3 +1,5 @@
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import _ from 'lodash';
 import React, { useCallback, useMemo } from 'react';
 import {
   Button,
@@ -8,24 +10,21 @@ import {
   Icon,
   Image,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-
-import { keepPreviousData, useQuery } from '@tanstack/react-query';
-import VenueLocationMap from './VenueLocationMap';
-import { backendTimezones } from '../../../lib/wca-data.js.erb';
-import RoomPanel from './RoomPanel';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
+import { fetchWithAuthenticityToken } from '../../../lib/requests/fetchWithAuthenticityToken';
+import { geocodingTimeZoneUrl } from '../../../lib/requests/routes.js.erb';
+import { toDegrees, toMicrodegrees } from '../../../lib/utils/edit-schedule';
+import { getTimeZoneDropdownLabel, sortByOffset } from '../../../lib/utils/timezone';
+import { backendTimezones } from '../../../lib/wca-data.js.erb';
+import RegionSelector from '../../wca/RegionSelector';
 import {
   addRoom,
   editVenue,
   removeVenue,
 } from '../store/actions';
-import { toDegrees, toMicrodegrees } from '../../../lib/utils/edit-schedule';
-import { fetchWithAuthenticityToken } from '../../../lib/requests/fetchWithAuthenticityToken';
-import { geocodingTimeZoneUrl } from '../../../lib/requests/routes.js.erb';
-import { getTimeZoneDropdownLabel, sortByOffset } from '../../../lib/utils/timezone';
-import RegionSelector from '../../wca/RegionSelector';
+import RoomPanel from './RoomPanel';
+import VenueLocationMap from './VenueLocationMap';
 
 // We need to keep track of which timezones the frontend can actually understand.
 //   Sometimes, package updates or Ruby runtime updates can introduce newly-fangled IANA timezones

@@ -3,10 +3,10 @@ import {
   Button, Form, Icon, Modal, Table,
 } from 'semantic-ui-react';
 import useLoadedData from '../../../../lib/hooks/useLoadedData';
-import { wfcXeroUsersUrl } from '../../../../lib/requests/routes.js.erb';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
 import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import { wfcXeroUsersUrl } from '../../../../lib/requests/routes.js.erb';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 
 export default function XeroUsers() {
   const {

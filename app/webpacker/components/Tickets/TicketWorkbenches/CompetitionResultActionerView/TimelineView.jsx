@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import { Icon, Popup, Step } from 'semantic-ui-react';
-import _ from 'lodash';
 import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
 
 const TIMELINE_STATUSES = [

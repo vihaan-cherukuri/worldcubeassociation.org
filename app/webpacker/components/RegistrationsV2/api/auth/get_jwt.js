@@ -1,5 +1,5 @@
-import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 import FetchJsonError from '../../../../lib/requests/FetchJsonError';
+import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 
 const JWT_KEY = 'jwt';
 

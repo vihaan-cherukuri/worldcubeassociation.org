@@ -1,12 +1,12 @@
+import _ from 'lodash';
 import React, { useCallback, useState } from 'react';
 import { Form } from 'semantic-ui-react';
-import _ from 'lodash';
-import { DNF_KEYS, DNS_KEYS } from './keybindings';
 import {
   SKIPPED_VALUE,
   DNF_VALUE,
   DNS_VALUE,
 } from '../../../../lib/wca-live/attempts';
+import { DNF_KEYS, DNS_KEYS } from './keybindings';
 
 function numberToInput(number) {
   if (number === SKIPPED_VALUE) return '';

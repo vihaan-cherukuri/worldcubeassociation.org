@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import {
   Button, Dropdown, Form, Header, Modal, Table,
 } from 'semantic-ui-react';
-import I18n from '../../../../lib/i18n';
+import { statusObjectOfGroupType } from '../../../../lib/helpers/status-objects';
+import useInputState from '../../../../lib/hooks/useInputState';
 import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import I18n from '../../../../lib/i18n';
+import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
 import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 import Errored from '../../../Requests/Errored';
 import Loading from '../../../Requests/Loading';
-import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
-import WcaSearch from '../../../SearchWidget/WcaSearch';
-import useInputState from '../../../../lib/hooks/useInputState';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import { statusObjectOfGroupType } from '../../../../lib/helpers/status-objects';
+import WcaSearch from '../../../SearchWidget/WcaSearch';
 
 const isLead = (role) => role.metadata.status === 'leader';
 

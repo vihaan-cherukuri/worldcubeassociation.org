@@ -1,8 +1,8 @@
 import React from 'react';
 import { Table, Confirm } from 'semantic-ui-react';
+import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import UserBadge from '../UserBadge';
 import UtcDatePicker from '../wca/UtcDatePicker';
-import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 
 export default function ProbationListTable({
   roleList, isActive, save, sync,

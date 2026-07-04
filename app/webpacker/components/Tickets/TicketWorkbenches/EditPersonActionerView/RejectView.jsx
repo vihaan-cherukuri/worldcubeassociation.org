@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import { Button, Confirm } from 'semantic-ui-react';
-import rejectEditPersonRequest from '../../api/editPerson/rejectEditPersonRequest';
+import { ticketStatuses } from '../../../../lib/wca-data.js.erb';
 import Errored from '../../../Requests/Errored';
 import Loading from '../../../Requests/Loading';
-import { ticketStatuses } from '../../../../lib/wca-data.js.erb';
+import rejectEditPersonRequest from '../../api/editPerson/rejectEditPersonRequest';
 
 export default function RejectView({ ticketId, currentStakeholder }) {
   const queryClient = useQueryClient();

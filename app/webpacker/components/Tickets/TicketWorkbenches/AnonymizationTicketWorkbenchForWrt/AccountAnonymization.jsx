@@ -3,8 +3,8 @@ import {
   Button, Confirm, Header, Loader,
   Message,
 } from 'semantic-ui-react';
-import { actionUrls } from '../../../../lib/requests/routes.js.erb';
 import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import { actionUrls } from '../../../../lib/requests/routes.js.erb';
 
 export default function AccountAnonymization({ userId, disabled = false }) {
   const [completed, setCompleted] = useState(false);

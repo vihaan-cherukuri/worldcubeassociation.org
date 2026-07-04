@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Message, Tab } from 'semantic-ui-react';
 import I18n from '../../lib/i18n';
-import UploadRegistrationCsv from './UploadRegistrationCsv';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
+import UploadRegistrationCsv from './UploadRegistrationCsv';
 
 export default function Wrapper({ competitionId }) {
   return (

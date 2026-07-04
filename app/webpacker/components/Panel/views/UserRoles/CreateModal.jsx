@@ -1,11 +1,11 @@
+import { useMutation } from '@tanstack/react-query';
 import React from 'react';
 import { Form, Modal } from 'semantic-ui-react';
-import { useMutation } from '@tanstack/react-query';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import createUserRole from './api/createUserRole';
-import Errored from '../../../Requests/Errored';
 import useInputState from '../../../../lib/hooks/useInputState';
+import Errored from '../../../Requests/Errored';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
+import createUserRole from './api/createUserRole';
 
 export default function CreateModal({
   open, onClose, title, groupId, status, location,

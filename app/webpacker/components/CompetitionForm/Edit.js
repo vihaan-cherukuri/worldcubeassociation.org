@@ -1,20 +1,20 @@
-import React, { useMemo } from 'react';
-import _ from 'lodash';
 import { useMutation } from '@tanstack/react-query';
+import _ from 'lodash';
+import React, { useMemo } from 'react';
+import I18n from '../../lib/i18n';
 import StoreProvider from '../../lib/providers/StoreProvider';
+import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
+import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { competitionUrl, confirmCompetitionUrl, homepageUrl } from '../../lib/requests/routes.js.erb';
 import EditForm from '../wca/FormBuilder/EditForm';
-import Header from './Header';
-import MainForm from './MainForm';
-import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
 import {
   confirmationDataQueryKey,
   useConfirmationData,
   useQueryDataSetter,
   useQueryRedirect,
 } from './api';
-import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
-import I18n from '../../lib/i18n';
+import Header from './Header';
+import MainForm from './MainForm';
 
 function EditCompetition({
   competition,

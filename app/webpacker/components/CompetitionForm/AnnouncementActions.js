@@ -1,27 +1,27 @@
+import { useMutation } from '@tanstack/react-query';
+import { DateTime } from 'luxon';
+import React from 'react';
 import {
   Header,
   List,
 } from 'semantic-ui-react';
-import React from 'react';
-import { DateTime } from 'luxon';
-import { useMutation } from '@tanstack/react-query';
 import I18n from '../../lib/i18n';
+import ConfirmProvider from '../../lib/providers/ConfirmProvider';
 import { useStore } from '../../lib/providers/StoreProvider';
+import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import {
   announceCompetitionUrl,
   cancelCompetitionUrl,
   closeRegistrationWhenFullUrl,
 } from '../../lib/requests/routes.js.erb';
-import ConfirmProvider from '../../lib/providers/ConfirmProvider';
-import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
+import Loading from '../Requests/Loading';
+import { FormActionButton } from '../wca/FormBuilder/EditForm';
 import {
   announcementDataQueryKey,
   confirmationDataQueryKey,
   useAnnouncementData,
   useQueryDataSetter,
 } from './api';
-import Loading from '../Requests/Loading';
-import { FormActionButton } from '../wca/FormBuilder/EditForm';
 
 function AnnounceAction({
   competitionId,

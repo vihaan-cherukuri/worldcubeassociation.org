@@ -1,8 +1,8 @@
 import React from 'react';
 
 import '../../stylesheets/search_widget/UserItem.scss';
-import UserItem from './UserItem';
 import I18n from '../../lib/i18n';
+import UserItem from './UserItem';
 
 export default function UserRoleItem({
   item,

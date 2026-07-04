@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {
   createContext,
   useCallback,
@@ -5,7 +6,6 @@ import React, {
   useMemo,
   useReducer,
 } from 'react';
-import _ from 'lodash';
 import { changesSaved, setErrors, updateFormValue } from '../store/actions';
 import formReducer from '../store/reducer';
 import SectionProvider, { readValueRecursive, useSections } from './FormSectionProvider';

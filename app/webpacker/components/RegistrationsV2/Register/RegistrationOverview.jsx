@@ -2,20 +2,20 @@ import React, { useCallback } from 'react';
 import {
   Button, ButtonGroup, Form, Header, List, Message, Segment,
 } from 'semantic-ui-react';
+import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
 import I18n from '../../../lib/i18n';
-import EventIcon from '../../wca/EventIcon';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
+import { contactCompetitionUrl } from '../../../lib/requests/routes.js.erb';
 import { hasPassed } from '../../../lib/utils/dates';
 import { events } from '../../../lib/wca-data.js.erb';
+import EventIcon from '../../wca/EventIcon';
+import { useFormSuccessHandler } from '../../wca/FormBuilder/provider/FormObjectProvider';
 import { useUpdateRegistrationMutation } from '../lib/mutations';
-import { showMessage } from './RegistrationMessage';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
-import { contactCompetitionUrl } from '../../../lib/requests/routes.js.erb';
-import RegistrationStatus from './RegistrationStatus';
 import { useRegistration } from '../lib/RegistrationProvider';
 import { useStepNavigation } from '../lib/StepNavigationProvider';
-import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
-import { useFormSuccessHandler } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import { showMessage } from './RegistrationMessage';
+import RegistrationStatus from './RegistrationStatus';
 
 export default function RegistrationOverview({
   competitionInfo,

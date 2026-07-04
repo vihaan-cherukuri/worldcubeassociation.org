@@ -1,15 +1,15 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useCallback } from 'react';
 import {
   Checkbox,
   Header,
   List,
 } from 'semantic-ui-react';
-import React, { useCallback } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
 import I18n from '../../lib/i18n';
+import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { updateUserNotificationsUrl } from '../../lib/requests/routes.js.erb';
 import Loading from '../Requests/Loading';
 import { userPreferencesQueryKey, useUserPreferences } from './api';
-import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 
 function NotificationSettingsAction({
   competitionId,

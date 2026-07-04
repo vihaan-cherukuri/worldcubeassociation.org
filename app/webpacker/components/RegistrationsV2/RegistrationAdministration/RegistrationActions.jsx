@@ -1,11 +1,10 @@
+import { noop } from 'lodash';
+import { DateTime } from 'luxon';
 import React, { useMemo } from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
-import { DateTime } from 'luxon';
-import { noop } from 'lodash';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { showMessage } from '../Register/RegistrationMessage';
 import I18n from '../../../lib/i18n';
-import { countries } from '../../../lib/wca-data.js.erb';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import {
   APPROVED_COLOR, APPROVED_ICON,
   CANCELLED_COLOR, CANCELLED_ICON,
@@ -16,7 +15,8 @@ import {
   sortRegistrations,
   WAITLIST_COLOR, WAITLIST_ICON,
 } from '../../../lib/utils/registrationAdmin';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { countries } from '../../../lib/wca-data.js.erb';
+import { showMessage } from '../Register/RegistrationMessage';
 
 function escapeCsv(value) {
   if (!value) return '';

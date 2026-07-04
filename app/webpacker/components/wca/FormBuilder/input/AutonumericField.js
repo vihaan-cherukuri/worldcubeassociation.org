@@ -1,10 +1,10 @@
+import AutoNumeric from 'autonumeric';
 import React, {
   useCallback,
   useEffect,
   useMemo,
   useState,
 } from 'react';
-import AutoNumeric from 'autonumeric';
 import { Input } from 'semantic-ui-react';
 import { currenciesData } from '../../../../lib/wca-data.js.erb';
 

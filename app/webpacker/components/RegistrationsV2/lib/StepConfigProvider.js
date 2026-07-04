@@ -1,9 +1,9 @@
+import { useQuery } from '@tanstack/react-query';
 import React, {
   createContext,
   useContext,
   useMemo,
 } from 'react';
-import { useQuery } from '@tanstack/react-query';
 import getRegistrationConfig from '../api/registration/get/get_registration_config';
 import { availableSteps } from './stepConfigs';
 

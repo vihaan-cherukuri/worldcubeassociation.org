@@ -1,7 +1,7 @@
 import React from 'react';
 
-import AttemptResultField from '../WCALive/AttemptResultField/AttemptResultField';
 import useNestedInputUpdater from '../../../lib/hooks/useNestedInputUpdater';
+import AttemptResultField from '../WCALive/AttemptResultField/AttemptResultField';
 
 function AttemptResultFieldWrapper({
   index, setState, attempt, eventId,

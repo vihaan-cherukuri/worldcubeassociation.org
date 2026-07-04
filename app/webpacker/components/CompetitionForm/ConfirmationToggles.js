@@ -1,17 +1,17 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import _ from 'lodash';
+import React, { useCallback } from 'react';
 import {
   Form,
   Header,
 } from 'semantic-ui-react';
-import React, { useCallback } from 'react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import _ from 'lodash';
 import I18n from '../../lib/i18n';
 import { useStore } from '../../lib/providers/StoreProvider';
-import { useFormErrorHandler } from '../wca/FormBuilder/provider/FormObjectProvider';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
-import { confirmationDataQueryKey, useConfirmationData } from './api';
-import Loading from '../Requests/Loading';
 import { updateCompetitionConfirmationDataUrl } from '../../lib/requests/routes.js.erb';
+import Loading from '../Requests/Loading';
+import { useFormErrorHandler } from '../wca/FormBuilder/provider/FormObjectProvider';
+import { confirmationDataQueryKey, useConfirmationData } from './api';
 
 function ConfirmationControlCheckbox({
   competitionId,

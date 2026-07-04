@@ -1,7 +1,7 @@
 import React from 'react';
 import SingleEntryTable from '../Panel/SingleEntryTable';
-import { ResultRowHeader } from './ResultRowHeader';
 import ResultRow from './ResultRow';
+import { ResultRowHeader } from './ResultRowHeader';
 
 function SingleResultRow({
   dataItem,

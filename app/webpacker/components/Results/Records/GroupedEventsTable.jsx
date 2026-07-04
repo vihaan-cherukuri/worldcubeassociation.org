@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React from 'react';
 import { Header, Icon } from 'semantic-ui-react';
-import _ from 'lodash';
 import { events, WCA_EVENT_IDS } from '../../../lib/wca-data.js.erb';
 
 export default function GroupedEventsTable({

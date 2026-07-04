@@ -1,13 +1,13 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useMemo } from 'react';
 import {
   Form, Header, Label, Loader, Message, Segment, Tab, Table,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import useInputState from '../../../../lib/hooks/useInputState';
 import { fetchJsonOrError } from '../../../../lib/requests/fetchWithAuthenticityToken';
 import { viewUrls, competitionUrl } from '../../../../lib/requests/routes.js.erb';
-import useInputState from '../../../../lib/hooks/useInputState';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 
 const statusColor = (s) => {
   switch (s?.toLowerCase()) {

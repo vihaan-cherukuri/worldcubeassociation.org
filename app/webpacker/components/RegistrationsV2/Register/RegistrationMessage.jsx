@@ -1,7 +1,7 @@
-import { Message } from 'semantic-ui-react';
 import React, { useEffect } from 'react';
-import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
+import { Message } from 'semantic-ui-react';
 import I18n from '../../../lib/i18n';
+import { useDispatch, useStore } from '../../../lib/providers/StoreProvider';
 
 /** To show multiple messages, use `showMessages` instead. */
 export const showMessage = (key, type, params) => ({

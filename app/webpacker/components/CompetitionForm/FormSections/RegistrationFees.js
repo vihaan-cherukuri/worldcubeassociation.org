@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
+import { currenciesData } from '../../../lib/wca-data.js.erb';
 import {
   InputBoolean,
   InputCurrencyAmount,
@@ -7,10 +8,9 @@ import {
   InputNumber,
   InputSelect,
 } from '../../wca/FormBuilder/input/FormInputs';
-import { currenciesData } from '../../../lib/wca-data.js.erb';
-import ConditionalSection from './ConditionalSection';
-import SubSection from '../../wca/FormBuilder/SubSection';
 import { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import SubSection from '../../wca/FormBuilder/SubSection';
+import ConditionalSection from './ConditionalSection';
 import DuesEstimate from './DuesEstimate';
 
 const currenciesOptions = Object.keys(currenciesData.byIso).map((iso) => ({

@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import {
   Button,
@@ -6,10 +7,9 @@ import {
   Header,
   Segment,
 } from 'semantic-ui-react';
-import _ from 'lodash';
 import I18n from '../../lib/i18n';
-import { backendTimezones } from '../../lib/wca-data.js.erb';
 import { sortByOffset } from '../../lib/utils/timezone';
+import { backendTimezones } from '../../lib/wca-data.js.erb';
 
 // Timezones that our Ruby backend knows about. They represent values that might be stored
 //   in the 'competition_venues' table.

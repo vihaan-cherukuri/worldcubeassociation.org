@@ -1,8 +1,8 @@
+import { DateTime } from 'luxon';
 import React, { useCallback, useMemo } from 'react';
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import { DateTime } from 'luxon';
 
 const loadAsPseudoLocal = (isoString) => {
   if (!isoString) { return false; }

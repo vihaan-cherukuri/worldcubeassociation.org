@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'semantic-ui-react';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import EventSelector from '../../../wca/EventSelector';
-import { events } from '../../../../lib/wca-data.js.erb';
-import { viewUrls } from '../../../../lib/requests/routes.js.erb';
-import useInputState from '../../../../lib/hooks/useInputState';
 import useCheckboxState from '../../../../lib/hooks/useCheckboxState';
+import useInputState from '../../../../lib/hooks/useInputState';
 import useQueryParams from '../../../../lib/hooks/useQueryParams';
+import { viewUrls } from '../../../../lib/requests/routes.js.erb';
+import { events } from '../../../../lib/wca-data.js.erb';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
+import EventSelector from '../../../wca/EventSelector';
 
 const ALL_EVENTS = Object.keys(events.byId);
 const ALL_EVENTS_KEY = 'all';

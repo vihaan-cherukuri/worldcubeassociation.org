@@ -1,18 +1,18 @@
+import _ from 'lodash';
 import React, { useState, useEffect } from 'react';
 import {
   Button, Form, Header, Icon, Message,
 } from 'semantic-ui-react';
-import _ from 'lodash';
+import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import I18n from '../../../../lib/i18n';
 import { panelPageUrl, apiV0Urls, personUrl } from '../../../../lib/requests/routes.js.erb';
 import { PANEL_PAGES } from '../../../../lib/wca-data.js.erb';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
-import Loading from '../../../Requests/Loading';
-import I18n from '../../../../lib/i18n';
-import useLoadedData from '../../../../lib/hooks/useLoadedData';
 import Errored from '../../../Requests/Errored';
-import UtcDatePicker from '../../../wca/UtcDatePicker';
-import RegionSelector from '../../../wca/RegionSelector';
+import Loading from '../../../Requests/Loading';
 import GenderSelector from '../../../wca/GenderSelector';
+import RegionSelector from '../../../wca/RegionSelector';
+import UtcDatePicker from '../../../wca/UtcDatePicker';
 
 export default function EditPersonForm({ wcaId, onSuccess, showDestroyButton = false }) {
   const {

@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import React from 'react';
 import { List, Message } from 'semantic-ui-react';
-import _ from 'lodash';
 import { viewUrls } from '../../../../lib/requests/routes.js.erb';
 
 export default function SpecialAccountDetails({ user }) {

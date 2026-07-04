@@ -1,6 +1,6 @@
-import pollingMock from '../../mocks/polling_mock';
-import { pollingRoute } from '../../../../../lib/requests/routes.js.erb';
 import { fetchJsonOrError } from '../../../../../lib/requests/fetchWithAuthenticityToken';
+import { pollingRoute } from '../../../../../lib/requests/routes.js.erb';
+import pollingMock from '../../mocks/polling_mock';
 
 export default async function pollRegistrations(
   userId,

@@ -1,12 +1,12 @@
+import { QueryClient, useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Input, Modal } from 'semantic-ui-react';
-import { QueryClient, useQuery } from '@tanstack/react-query';
 import useInputState from '../../../lib/hooks/useInputState';
+import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
 import { calculateDuesUrl } from '../../../lib/requests/routes.js.erb';
 import { currenciesData } from '../../../lib/wca-data.js.erb';
-import Loading from '../../Requests/Loading';
 import Errored from '../../Requests/Errored';
-import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
+import Loading from '../../Requests/Loading';
 
 const CALCULATE_DUES_QUERY_CLIENT = new QueryClient();
 

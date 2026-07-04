@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import {
   Button,
@@ -5,9 +6,8 @@ import {
   Form,
   Icon,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import { groupedChampionshipTypes } from '../../../../lib/wca-data.js.erb';
 import I18n from '../../../../lib/i18n';
+import { groupedChampionshipTypes } from '../../../../lib/wca-data.js.erb';
 
 const generateChampionshipName = (type, championship) => {
   switch (type) {

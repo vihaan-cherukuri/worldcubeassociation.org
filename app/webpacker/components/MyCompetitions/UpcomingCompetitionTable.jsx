@@ -1,16 +1,16 @@
+import { DateTime } from 'luxon';
 import React from 'react';
 import {
   Icon, Message, Popup, Table,
 } from 'semantic-ui-react';
-import { DateTime } from 'luxon';
 import I18n from '../../lib/i18n';
-import { competitionStatusText } from '../../lib/utils/competition-table';
 import { competitionEditRegistrationsUrl, editCompetitionsUrl } from '../../lib/requests/routes.js.erb';
+import { competitionStatusText } from '../../lib/utils/competition-table';
+import { toRelativeOptions } from '../../lib/utils/dates';
+import I18nHTMLTranslate from '../I18nHTMLTranslate';
 import {
   DateTableCell, LocationTableCell, NameTableCell, ReportTableCell,
 } from './TableCells';
-import I18nHTMLTranslate from '../I18nHTMLTranslate';
-import { toRelativeOptions } from '../../lib/utils/dates';
 
 const competingStatusIcon = (competingStatus) => {
   switch (competingStatus) {

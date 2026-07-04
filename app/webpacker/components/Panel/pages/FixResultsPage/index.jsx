@@ -1,13 +1,13 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import {
   Button, Form, Header, Loader,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
-import { events, roundTypes } from '../../../../lib/wca-data.js.erb';
 import { editResultUrl } from '../../../../lib/requests/routes.js.erb';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { events, roundTypes } from '../../../../lib/wca-data.js.erb';
 import Errored from '../../../Requests/Errored';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 import { getCompetitions, getEvents, getResults } from './api/getFixResultsData';
 
 function FixResultsPage() {

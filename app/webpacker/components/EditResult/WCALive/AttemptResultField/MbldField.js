@@ -1,14 +1,14 @@
 import React, { useState, useCallback } from 'react';
 import { Grid } from 'semantic-ui-react';
-import { DNF_KEYS, DNS_KEYS } from './keybindings';
-import TimeField from './TimeField';
-import CubesField from './CubesField';
 import {
   decodeMbldAttemptResult,
   encodeMbldAttemptResult,
   DNF_VALUE,
   DNS_VALUE,
 } from '../../../../lib/wca-live/attempts';
+import CubesField from './CubesField';
+import { DNF_KEYS, DNS_KEYS } from './keybindings';
+import TimeField from './TimeField';
 
 /* eslint react/jsx-props-no-spreading: "off" */
 function MbldField({

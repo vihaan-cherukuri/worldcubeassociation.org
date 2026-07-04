@@ -1,11 +1,11 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { ResultsPreview } from './ResultsPreview';
-import mergeInboxResults from '../../api/competitionResult/mergeInboxResults';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
 import { ticketsCompetitionResultStatuses } from '../../../../lib/wca-data.js.erb';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import mergeInboxResults from '../../api/competitionResult/mergeInboxResults';
+import { ResultsPreview } from './ResultsPreview';
 
 export default function MergeInboxResults({ ticketDetails, currentStakeholder }) {
   const { ticket: { id, metadata: { competition_id: competitionId } } } = ticketDetails;

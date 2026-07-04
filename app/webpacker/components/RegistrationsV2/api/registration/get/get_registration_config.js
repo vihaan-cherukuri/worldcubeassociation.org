@@ -1,5 +1,5 @@
-import { getRegistrationConfigUrl } from '../../../../../lib/requests/routes.js.erb';
 import { fetchJsonOrError } from '../../../../../lib/requests/fetchWithAuthenticityToken';
+import { getRegistrationConfigUrl } from '../../../../../lib/requests/routes.js.erb';
 
 export default async function getRegistrationConfig(
   competitionId,

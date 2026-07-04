@@ -2,13 +2,13 @@ import React, { useEffect, useMemo } from 'react';
 import {
   Container, Dropdown, Grid, Header, Menu, Segment,
 } from 'semantic-ui-react';
+import useHash from '../../lib/hooks/useHash';
+import useLoadedData from '../../lib/hooks/useLoadedData';
 import I18n from '../../lib/i18n';
 import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../lib/wca-data.js.erb';
-import useLoadedData from '../../lib/hooks/useLoadedData';
-import Loading from '../Requests/Loading';
 import Errored from '../Requests/Errored';
-import useHash from '../../lib/hooks/useHash';
+import Loading from '../Requests/Loading';
 import GroupPage from './GroupPage';
 
 export default function TeamsCommitteesCouncils({ canViewPastRoles }) {

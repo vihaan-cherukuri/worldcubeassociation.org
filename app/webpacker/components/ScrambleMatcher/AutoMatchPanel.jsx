@@ -1,17 +1,17 @@
-import React, { useCallback } from 'react';
 import _ from 'lodash';
+import { DateTime } from 'luxon';
+import React, { useCallback } from 'react';
 import {
   Button, Form, Header, Message, Modal,
 } from 'semantic-ui-react';
-import { DateTime } from 'luxon';
 import { useCheckboxUpdater } from '../../lib/hooks/useCheckboxState';
+import { events } from '../../lib/wca-data.js.erb';
+import MatchingProgressTable from './MatchingProgressTable';
 import {
   ATTEMPT_BASED_EVENTS,
   filterUnusedScrambles, unpackMatchingState,
   unpackScrambleSets,
 } from './util';
-import { events } from '../../lib/wca-data.js.erb';
-import MatchingProgressTable from './MatchingProgressTable';
 
 function AutoMatchConfigModal({
   autoMatchSettings,

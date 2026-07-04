@@ -1,16 +1,16 @@
-import React, { useCallback, useMemo } from 'react';
 import _ from 'lodash';
+import React, { useCallback, useMemo } from 'react';
 
 import { Button, Card, Message } from 'semantic-ui-react';
+import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
+import ConfirmProvider from '../../lib/providers/ConfirmProvider';
+import Store, { useDispatch, useStore } from '../../lib/providers/StoreProvider';
+import { useSaveWcifAction } from '../../lib/utils/wcif';
 import { events } from '../../lib/wca-data.js.erb';
 
-import { useSaveWcifAction } from '../../lib/utils/wcif';
 import EventPanel from './EventPanel';
 import { changesSaved } from './store/actions';
 import wcifEventsReducer from './store/reducer';
-import Store, { useDispatch, useStore } from '../../lib/providers/StoreProvider';
-import ConfirmProvider from '../../lib/providers/ConfirmProvider';
-import useUnsavedChangesAlert from '../../lib/hooks/useUnsavedChangesAlert';
 
 function EditEvents() {
   const {

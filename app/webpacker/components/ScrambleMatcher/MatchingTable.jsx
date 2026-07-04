@@ -1,3 +1,5 @@
+import { Draggable, Droppable } from '@hello-pangea/dnd';
+import _ from 'lodash';
 import React from 'react';
 import {
   Button,
@@ -8,17 +10,15 @@ import {
   Segment,
   Table,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import { Draggable, Droppable } from '@hello-pangea/dnd';
+import I18n from '../../lib/i18n';
+import { useMoveScrambleSetModal } from './MoveScrambleSetModal';
+import { DraggableScrambleCard } from './UnusedScramblesPanel';
 import {
   calculateRoundExpectedCount,
   DROPPABLE_ID_MATCHED_SCRAMBLES,
   getAttemptsMultiplier,
   scrambleSetToTitle,
 } from './util';
-import { DraggableScrambleCard } from './UnusedScramblesPanel';
-import { useMoveScrambleSetModal } from './MoveScrambleSetModal';
-import I18n from '../../lib/i18n';
 
 export default function MatchingTable({
   selectedEvent,

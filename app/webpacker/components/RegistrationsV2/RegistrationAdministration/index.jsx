@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import { Sticky } from 'semantic-ui-react';
-import RegistrationAdministrationList from './RegistrationAdministrationList';
-import RegistrationMessage from '../Register/RegistrationMessage';
-import messageReducer from '../reducers/messageReducer';
+import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
 import StoreProvider from '../../../lib/providers/StoreProvider';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
-import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
+import messageReducer from '../reducers/messageReducer';
+import RegistrationMessage from '../Register/RegistrationMessage';
+import RegistrationAdministrationList from './RegistrationAdministrationList';
 
 export default function RegistrationEdit({ competitionInfo }) {
   const ref = useRef();

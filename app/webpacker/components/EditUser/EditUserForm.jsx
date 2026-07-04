@@ -1,13 +1,13 @@
+import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Form, Message } from 'semantic-ui-react';
-import { useMutation } from '@tanstack/react-query';
 import I18n from '../../lib/i18n';
-import RegionSelector from '../wca/RegionSelector';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
 import GenderSelector from '../wca/GenderSelector';
+import RegionSelector from '../wca/RegionSelector';
 import UtcDatePicker from '../wca/UtcDatePicker';
 import updateUserData from './api/updateUserData';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
 
 export const RESYNC_MESSAGE = 'Please make sure to re-sync WCA Live and other tools (like Groupifier) to get the updated details.';
 

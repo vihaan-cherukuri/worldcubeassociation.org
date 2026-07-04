@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
+import { apiV0Urls } from '../../lib/requests/routes.js.erb';
 
 const useDelegatesData = () => {
   const {

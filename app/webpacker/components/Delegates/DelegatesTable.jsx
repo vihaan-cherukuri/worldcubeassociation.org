@@ -1,7 +1,7 @@
+import cn from 'classnames';
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import { Button, Table } from 'semantic-ui-react';
-import _ from 'lodash';
-import cn from 'classnames';
 import I18n from '../../lib/i18n';
 import { competitionsUrl } from '../../lib/requests/routes.js.erb';
 import UserBadge from '../UserBadge';

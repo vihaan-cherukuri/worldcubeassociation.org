@@ -1,15 +1,15 @@
+import { useMutation, useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Accordion, Form, Message } from 'semantic-ui-react';
-import { useMutation, useQuery } from '@tanstack/react-query';
-import Errored from '../../Requests/Errored';
-import useInputState from '../../../lib/hooks/useInputState';
-import MarkdownEditor from '../../wca/FormBuilder/input/MarkdownEditor';
 import useCheckboxState from '../../../lib/hooks/useCheckboxState';
-import submitToWrt from '../api/submitToWrt';
-import Loading from '../../Requests/Loading';
-import runValidatorsForCompetitionList from '../../Panel/pages/RunValidatorsPage/api/runValidatorsForCompetitionList';
+import useInputState from '../../../lib/hooks/useInputState';
 import { ALL_VALIDATORS } from '../../../lib/wca-data.js.erb';
+import runValidatorsForCompetitionList from '../../Panel/pages/RunValidatorsPage/api/runValidatorsForCompetitionList';
 import ValidationOutput from '../../Panel/pages/RunValidatorsPage/ValidationOutput';
+import Errored from '../../Requests/Errored';
+import Loading from '../../Requests/Loading';
+import MarkdownEditor from '../../wca/FormBuilder/input/MarkdownEditor';
+import submitToWrt from '../api/submitToWrt';
 
 const DELEGATE_HANDBOOK_COMPETITION_RESULTS_URL = 'https://documents.worldcubeassociation.org/edudoc/delegate-handbook/delegate-handbook.pdf#competition-results';
 const ERROR_MESSAGE_UPLOADED_RESULTS = "Please upload a JSON file and make sure the results don't contain any errors.";

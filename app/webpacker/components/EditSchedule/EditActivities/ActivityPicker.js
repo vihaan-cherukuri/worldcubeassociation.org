@@ -1,3 +1,5 @@
+import cn from 'classnames';
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import {
   Label,
@@ -5,11 +7,9 @@ import {
   Popup,
   Ref,
 } from 'semantic-ui-react';
-import cn from 'classnames';
-import _ from 'lodash';
+import { activityToFcTitle, buildPartialActivityFromCode } from '../../../lib/utils/edit-schedule';
 import { shortLabelForActivityCode } from '../../../lib/utils/wcif';
 import { formats } from '../../../lib/wca-data.js.erb';
-import { activityToFcTitle, buildPartialActivityFromCode } from '../../../lib/utils/edit-schedule';
 
 function ActivityPicker({
   wcifEvents,

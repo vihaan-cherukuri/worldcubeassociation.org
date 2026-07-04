@@ -1,8 +1,8 @@
-import React from 'react';
 import _ from 'lodash';
+import React from 'react';
 import { Table } from 'semantic-ui-react';
-import { formatAttemptResult } from '../../lib/wca-live/attempts';
 import I18n from '../../lib/i18n';
+import { formatAttemptResult } from '../../lib/wca-live/attempts';
 import {
   AttemptsCells,
   CompetitionCell,

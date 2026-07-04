@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
-import { Image } from 'semantic-ui-react';
 import { convertToPercentCrop } from 'react-image-crop';
+import { Image } from 'semantic-ui-react';
 
 function CroppedImage({
   crop,

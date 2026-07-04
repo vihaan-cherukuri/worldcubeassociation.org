@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Message, Segment } from 'semantic-ui-react';
+import useSet from '../../lib/hooks/useSet';
+import useStoredState from '../../lib/hooks/useStoredState';
+import I18n from '../../lib/i18n';
+import { earliestWithLongestTieBreaker } from '../../lib/utils/activities';
+import { getDatesBetweenInclusive } from '../../lib/utils/dates';
+import EventSelector from '../wca/EventSelector';
 import CalendarView from './CalendarView';
 import TableView from './TableView';
 import TimeZoneSelector from './TimeZone';
 import VenuesAndRooms from './VenuesAndRooms';
 import ViewSelector from './ViewSelector';
-import useStoredState from '../../lib/hooks/useStoredState';
-import useSet from '../../lib/hooks/useSet';
-import { earliestWithLongestTieBreaker } from '../../lib/utils/activities';
-import { getDatesBetweenInclusive } from '../../lib/utils/dates';
-import EventSelector from '../wca/EventSelector';
-import I18n from '../../lib/i18n';
 
 export default function Schedule({
   wcifSchedule,

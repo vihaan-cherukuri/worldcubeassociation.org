@@ -3,14 +3,14 @@ import React from 'react';
 import {
   Dropdown, Input, Table,
 } from 'semantic-ui-react';
-import { events, formats } from '../../../lib/wca-data.js.erb';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import { roundIdToString } from '../../../lib/utils/wcif';
+import { events, formats } from '../../../lib/wca-data.js.erb';
 
 import {
   EditAdvancementConditionModal, EditTimeLimitModal, EditCutoffModal,
 } from '../Modals';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
 import { updateRoundFormat, setScrambleSetCount, updateCutoff } from '../store/actions';
 
 export default function RoundRow({

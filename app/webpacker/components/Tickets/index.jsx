@@ -1,16 +1,16 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useMemo } from 'react';
 import {
   Button, Container, Message, Modal,
 } from 'semantic-ui-react';
-import { useQuery } from '@tanstack/react-query';
-import Loading from '../Requests/Loading';
-import Errored from '../Requests/Errored';
 import useInputState from '../../lib/hooks/useInputState';
 import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
-import TicketContent from './TicketContent';
-import SkateholderSelector from './SkateholderSelector';
+import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
 import getTicketDetails from './api/getTicketDetails';
 import SelfRoleAssigner from './SelfRoleAssigner';
+import SkateholderSelector from './SkateholderSelector';
+import TicketContent from './TicketContent';
 
 export default function Wrapper({ id }) {
   return (

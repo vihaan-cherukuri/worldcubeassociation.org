@@ -1,4 +1,6 @@
 import React, { useMemo } from 'react';
+import I18n from '../../../lib/i18n';
+import { hasNotPassedOrNull } from '../../../lib/utils/dates';
 import {
   InputBoolean,
   InputBooleanSelect,
@@ -8,14 +10,12 @@ import {
   InputRadio,
   InputSelect,
 } from '../../wca/FormBuilder/input/FormInputs';
-import ConditionalSection from './ConditionalSection';
-import I18n from '../../../lib/i18n';
-import SubSection from '../../wca/FormBuilder/SubSection';
 import {
   useFormInitialObject,
   useFormObject,
 } from '../../wca/FormBuilder/provider/FormObjectProvider';
-import { hasNotPassedOrNull } from '../../../lib/utils/dates';
+import SubSection from '../../wca/FormBuilder/SubSection';
+import ConditionalSection from './ConditionalSection';
 
 const guestsEnabledOptions = [true, false].map((bool) => ({
   value: bool,

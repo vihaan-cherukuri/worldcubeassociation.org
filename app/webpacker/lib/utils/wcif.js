@@ -1,10 +1,10 @@
-import { useCallback } from 'react';
 import { DateTime } from 'luxon';
-import { events } from '../wca-data.js.erb';
-import I18n from '../i18n';
-import { attemptResultToString, attemptResultToMbPoints } from './edit-events';
+import { useCallback } from 'react';
 import useSaveAction from '../hooks/useSaveAction';
+import I18n from '../i18n';
+import { events } from '../wca-data.js.erb';
 import { centisecondsToClockFormat } from '../wca-live/attempts';
+import { attemptResultToString, attemptResultToMbPoints } from './edit-events';
 
 export function useSaveWcifAction() {
   const { save, saving } = useSaveAction();

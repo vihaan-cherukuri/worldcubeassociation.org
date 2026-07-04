@@ -1,10 +1,10 @@
 import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
-import uploadResultsJson from '../api/uploadResultsJson';
 import useCheckboxState from '../../../lib/hooks/useCheckboxState';
 import Errored from '../../Requests/Errored';
 import Loading from '../../Requests/Loading';
+import uploadResultsJson from '../api/uploadResultsJson';
 
 export default function UploadResultsJson({ competitionId, isAdminView, onImportSuccess }) {
   const [resultFile, setResultFile] = useState();

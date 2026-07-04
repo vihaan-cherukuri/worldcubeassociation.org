@@ -1,14 +1,14 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useCallback, useState } from 'react';
 import { Confirm, Modal } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import EditPersonRequestedChangesList from './EditPersonRequestedChangesList';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
-import createEditPersonField from '../../api/competitionResult/createEditPersonField';
-import updateEditPersonField from '../../api/competitionResult/updateEditPersonField';
-import deleteEditPersonField from '../../api/competitionResult/deleteEditPersonField';
-import EditPersonFieldEditor from './EditPersonFieldEditor';
 import { updateTicketMetadata } from '../../../../lib/helpers/update-ticket-query-data';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import createEditPersonField from '../../api/competitionResult/createEditPersonField';
+import deleteEditPersonField from '../../api/competitionResult/deleteEditPersonField';
+import updateEditPersonField from '../../api/competitionResult/updateEditPersonField';
+import EditPersonFieldEditor from './EditPersonFieldEditor';
+import EditPersonRequestedChangesList from './EditPersonRequestedChangesList';
 
 export default function EditPersonRequestedChanges({
   ticketId,

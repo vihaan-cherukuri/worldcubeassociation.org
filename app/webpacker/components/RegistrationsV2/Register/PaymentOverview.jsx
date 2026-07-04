@@ -1,15 +1,15 @@
+import _ from 'lodash';
 import React from 'react';
 import {
   Accordion,
   Icon, Message,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import I18n from '../../../lib/i18n';
-import { useRegistration } from '../lib/RegistrationProvider';
 import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
 import useCheckboxState from '../../../lib/hooks/useCheckboxState';
-import StripePaymentStep from './StripePaymentStep';
+import I18n from '../../../lib/i18n';
 import { hasPassed } from '../../../lib/utils/dates';
+import { useRegistration } from '../lib/RegistrationProvider';
+import StripePaymentStep from './StripePaymentStep';
 
 function PaymentMessage({
   message, icon, success, warning, negative,

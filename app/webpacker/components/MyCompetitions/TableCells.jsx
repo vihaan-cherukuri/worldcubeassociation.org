@@ -1,9 +1,9 @@
-import { Icon, Popup, Table } from 'semantic-ui-react';
 import React from 'react';
+import { Icon, Popup, Table } from 'semantic-ui-react';
 import I18n from '../../lib/i18n';
 import { competitionReportUrl, competitionReportEditUrl } from '../../lib/requests/routes.js.erb';
-import { countries } from '../../lib/wca-data.js.erb';
 import { dateRange } from '../../lib/utils/dates';
+import { countries } from '../../lib/wca-data.js.erb';
 
 export function NameTableCell({ competition }) {
   return (

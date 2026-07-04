@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { getRecords } from '../api/records';
 import Loading from '../../Requests/Loading';
+import { getRecords } from '../api/records';
+import DataTable from '../DataTable';
 import GroupedEventsTable from './GroupedEventsTable';
 import GroupedRankingTypesTable from './GroupedRankingTypesTable';
 import {
@@ -11,7 +12,6 @@ import {
   separateRecordsConfig,
   slimConfig,
 } from './utils';
-import DataTable from '../DataTable';
 
 function SlimRecordsTable({ results }) {
   const [slimmedRows] = results;

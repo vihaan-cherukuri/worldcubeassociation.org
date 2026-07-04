@@ -1,8 +1,8 @@
 import React from 'react';
 
+import useInputState from '../../lib/hooks/useInputState';
 import { omnisearchApiUrl } from '../../lib/requests/routes.js.erb';
 import MultiSearchInput from './MultiSearchInput';
-import useInputState from '../../lib/hooks/useInputState';
 
 function SearchWidget() {
   // purely a dummy for now...

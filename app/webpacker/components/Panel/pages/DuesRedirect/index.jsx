@@ -3,13 +3,13 @@ import {
   Button, Confirm, Form, Icon, Modal, Table,
 } from 'semantic-ui-react';
 import useLoadedData from '../../../../lib/hooks/useLoadedData';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
 import { wfcDuesRedirectsUrl, wfcXeroUsersUrl } from '../../../../lib/requests/routes.js.erb';
 import Errored from '../../../Requests/Errored';
 import Loading from '../../../Requests/Loading';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
-import RegionSelector from '../../../wca/RegionSelector';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
+import RegionSelector from '../../../wca/RegionSelector';
 
 export default function DuesRedirect() {
   const {

@@ -2,12 +2,12 @@ import React, { useMemo } from 'react';
 import {
   FormField, FormGroup, Radio,
 } from 'semantic-ui-react';
+import useLoggedInUserPermissions from '../../../../lib/hooks/useLoggedInUserPermissions';
 import I18n from '../../../../lib/i18n';
 import { useDispatch, useStore } from '../../../../lib/providers/StoreProvider';
+import Loading from '../../../Requests/Loading';
 import { updateSectionData } from '../../store/actions';
 import OtherQuery from './OtherQuery';
-import Loading from '../../../Requests/Loading';
-import useLoggedInUserPermissions from '../../../../lib/hooks/useLoggedInUserPermissions';
 
 const SECTION = 'wrt';
 const QUERY_TYPES = [

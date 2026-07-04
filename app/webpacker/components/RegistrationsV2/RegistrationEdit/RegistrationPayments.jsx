@@ -1,20 +1,20 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import _ from 'lodash';
 import React from 'react';
 import {
   Button, Header, Message, Table,
 } from 'semantic-ui-react';
-import _ from 'lodash';
-import getRegistrationPayments from '../api/payment/get/getRegistrationPayments';
-import refundPayment from '../api/payment/get/refundPayment';
+import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
+import useInputState from '../../../lib/hooks/useInputState';
+import I18n from '../../../lib/i18n';
+import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { useDispatch } from '../../../lib/providers/StoreProvider';
 import Loading from '../../Requests/Loading';
 import AutonumericField from '../../wca/FormBuilder/input/AutonumericField';
-import I18n from '../../../lib/i18n';
-import { showMessage } from '../Register/RegistrationMessage';
-import { useDispatch } from '../../../lib/providers/StoreProvider';
-import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
+import getRegistrationPayments from '../api/payment/get/getRegistrationPayments';
+import refundPayment from '../api/payment/get/refundPayment';
 import getUsersInfo from '../api/user/post/getUserInfo';
-import useInputState from '../../../lib/hooks/useInputState';
-import { useConfirm } from '../../../lib/providers/ConfirmProvider';
+import { showMessage } from '../Register/RegistrationMessage';
 
 export default function RegistrationPayments({
   registrationId,

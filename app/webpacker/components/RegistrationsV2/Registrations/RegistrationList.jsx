@@ -6,9 +6,9 @@ import {
   Segment,
 } from 'semantic-ui-react';
 import { events } from '../../../lib/wca-data.js.erb';
+import Competitors from './Competitors';
 import PsychSheet from './PsychSheet';
 import PsychSheetEventSelector from './PsychSheetEventSelector';
-import Competitors from './Competitors';
 
 export default function RegistrationList({ competitionInfo, userId }) {
   const [psychSheetEventId, setPsychSheetEventId] = useState();

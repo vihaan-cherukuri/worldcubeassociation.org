@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react';
+import useSaveAction from '../../../../lib/hooks/useSaveAction';
+import I18n from '../../../../lib/i18n';
 import { apiV0Urls } from '../../../../lib/requests/routes.js.erb';
 import { groupTypes, banScopes } from '../../../../lib/wca-data.js.erb';
-import WcaSearch from '../../../SearchWidget/WcaSearch';
-import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import UtcDatePicker from '../../../wca/UtcDatePicker';
-import useSaveAction from '../../../../lib/hooks/useSaveAction';
-import Loading from '../../../Requests/Loading';
 import Errored from '../../../Requests/Errored';
-import I18n from '../../../../lib/i18n';
+import Loading from '../../../Requests/Loading';
+import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import WcaSearch from '../../../SearchWidget/WcaSearch';
+import UtcDatePicker from '../../../wca/UtcDatePicker';
 
 const banScopeOptions = Object.keys(banScopes).map((option) => ({
   key: option,

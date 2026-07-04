@@ -1,5 +1,5 @@
-import React from 'react';
 import { useQueryClient } from '@tanstack/react-query';
+import React from 'react';
 import MergeUsers from '../Panel/pages/MergeUsersPage/MergeUsers';
 import AssignWcaIdToUser from '../Panel/views/AssignWcaIdToUser';
 

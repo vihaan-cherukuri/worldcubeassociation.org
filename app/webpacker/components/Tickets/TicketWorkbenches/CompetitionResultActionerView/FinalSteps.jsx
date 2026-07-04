@@ -1,10 +1,10 @@
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import { Button, Confirm, List } from 'semantic-ui-react';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
-import postResults from '../../api/competitionResult/postResults';
 import { viewUrls, competitionAllResultsUrl } from '../../../../lib/requests/routes.js.erb';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import postResults from '../../api/competitionResult/postResults';
 
 export default function FinalSteps({ ticketDetails }) {
   const { ticket: { id, metadata: { competition_id: competitionId } } } = ticketDetails;

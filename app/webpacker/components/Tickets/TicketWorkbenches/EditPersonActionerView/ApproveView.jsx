@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
+import React, { useState } from 'react';
 import { Button, Confirm } from 'semantic-ui-react';
-import approveEditPersonRequest from '../../api/editPerson/approveEditPersonRequest';
 import { updateTicketMetadata } from '../../../../lib/helpers/update-ticket-query-data';
 import { ticketStatuses } from '../../../../lib/wca-data.js.erb';
-import Loading from '../../../Requests/Loading';
 import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import approveEditPersonRequest from '../../api/editPerson/approveEditPersonRequest';
 
 export default function ApproveView({ ticketId, currentStakeholder }) {
   const queryClient = useQueryClient();

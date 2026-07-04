@@ -1,15 +1,15 @@
-import React, { useMemo } from 'react';
 import { useMutation, useQuery } from '@tanstack/react-query';
+import React, { useMemo } from 'react';
 import {
   Button, Form, Header, Select,
 } from 'semantic-ui-react';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
-import getUserDetails from './api/getUserDetails';
 import useInputState from '../../../../lib/hooks/useInputState';
+import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import getUserDetails from './api/getUserDetails';
 import mergeUsers from './api/mergeUsers';
 import SpecialAccountDetails from './SpecialAccountDetails';
-import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
 
 export default function MergeUsers({
   firstUserId, secondUserId, onSuccess, requireConfirmation,

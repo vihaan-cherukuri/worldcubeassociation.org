@@ -1,14 +1,14 @@
 import React from 'react';
 import { Header, List } from 'semantic-ui-react';
+import useLoadedData from '../../../../lib/hooks/useLoadedData';
 import {
   apiV0Urls,
   pendingClaimsUrl,
   competitionsForSeniorUrl,
 } from '../../../../lib/requests/routes.js.erb';
 import { groupTypes } from '../../../../lib/wca-data.js.erb';
-import useLoadedData from '../../../../lib/hooks/useLoadedData';
-import Loading from '../../../Requests/Loading';
 import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 
 export default function SeniorDelegatesList() {
   const { data: seniorDelegates, loading, error } = useLoadedData(

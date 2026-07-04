@@ -4,8 +4,8 @@ import {
   Button, Message, Modal, Segment,
 } from 'semantic-ui-react';
 import { RESYNC_MESSAGE } from '../EditUser/EditUserForm';
-import SimilarPersonTable from './SimilarPersonTable';
 import MergeModal from './MergeModal';
+import SimilarPersonTable from './SimilarPersonTable';
 
 export default function SimilarPersons({ similarPersons, competitionId, setUserIdToEdit }) {
   const duplicatesByUserId = _.groupBy(similarPersons, 'original_user_id');

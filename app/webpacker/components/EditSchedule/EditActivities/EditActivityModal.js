@@ -1,3 +1,4 @@
+import { DateTime } from 'luxon';
 import React, { useEffect } from 'react';
 import {
   Button,
@@ -5,9 +6,8 @@ import {
   Form,
   Modal,
 } from 'semantic-ui-react';
-import { DateTime } from 'luxon';
-import I18n from '../../../lib/i18n';
 import useInputState from '../../../lib/hooks/useInputState';
+import I18n from '../../../lib/i18n';
 
 const otherActivityCodes = [
   'other-registration',

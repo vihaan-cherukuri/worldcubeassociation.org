@@ -1,14 +1,13 @@
+import _ from 'lodash';
 import React, { useState } from 'react';
 import {
   Form, Grid, Icon, Popup,
 } from 'semantic-ui-react';
-
-import _ from 'lodash';
-import { formats, events, roundTypes } from '../../../lib/wca-data.js.erb';
 import useNestedInputUpdater from '../../../lib/hooks/useNestedInputUpdater';
 import useRoundDataSetter from '../../../lib/hooks/useRoundDataSetter';
-import { competitionEventsDataUrl } from '../../../lib/requests/routes.js.erb';
 import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
+import { competitionEventsDataUrl } from '../../../lib/requests/routes.js.erb';
+import { formats, events, roundTypes } from '../../../lib/wca-data.js.erb';
 
 const itemFromId = (id, items) => ({
   key: id,

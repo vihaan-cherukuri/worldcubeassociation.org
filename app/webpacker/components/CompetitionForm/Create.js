@@ -1,14 +1,14 @@
-import React from 'react';
-import _ from 'lodash';
 import { useMutation } from '@tanstack/react-query';
+import _ from 'lodash';
+import React from 'react';
+import I18n from '../../lib/i18n';
 import StoreProvider from '../../lib/providers/StoreProvider';
+import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
+import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { createCompetitionUrl } from '../../lib/requests/routes.js.erb';
 import EditForm from '../wca/FormBuilder/EditForm';
-import MainForm from './MainForm';
-import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
 import { useQueryRedirect } from './api';
-import WCAQueryClientProvider from '../../lib/providers/WCAQueryClientProvider';
-import I18n from '../../lib/i18n';
+import MainForm from './MainForm';
 
 function CreateCompetition({
   competition = null,

@@ -1,6 +1,6 @@
 import React from 'react';
-import useLoadedData from './useLoadedData';
 import { apiV0Urls } from '../requests/routes.js.erb';
+import useLoadedData from './useLoadedData';
 
 export default function useLoggedInUserPermissions() {
   // FIXME: We won't be knowing whether the user is logged in or not. If the user is not logged in,

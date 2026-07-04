@@ -1,16 +1,16 @@
+import { useMutation } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import {
   Form, FormField, FormGroup, Header, HeaderSubheader, Radio,
 } from 'semantic-ui-react';
-import { useMutation } from '@tanstack/react-query';
+import useCheckboxState from '../../../../lib/hooks/useCheckboxState';
 import useInputState from '../../../../lib/hooks/useInputState';
 import { ALL_VALIDATORS, VALIDATORS_WITH_FIX } from '../../../../lib/wca-data.js.erb';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
-import CompetitionRangeSelector from './CompetitionRangeSelector';
-import useCheckboxState from '../../../../lib/hooks/useCheckboxState';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 import runValidatorsForCompetitionList from './api/runValidatorsForCompetitionList';
 import runValidatorsForCompetitionsInRange from './api/runValidatorsForCompetitionsInRange';
+import CompetitionRangeSelector from './CompetitionRangeSelector';
 import ValidationOutput from './ValidationOutput';
 
 const VALIDATOR_OPTIONS = ALL_VALIDATORS.map((validator) => ({

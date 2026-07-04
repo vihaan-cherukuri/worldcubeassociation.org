@@ -1,6 +1,6 @@
 import React from 'react';
-import EditEntry from '../ResultsData/Panel/EditEntry';
 import { scrambleUrl } from '../../lib/requests/routes.js.erb';
+import EditEntry from '../ResultsData/Panel/EditEntry';
 import ShowSingleScramble from '../ResultsData/Scrambles/ShowSingleScramble';
 import ScrambleForm from './ScrambleForm/ScrambleForm';
 

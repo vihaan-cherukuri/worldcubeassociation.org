@@ -1,22 +1,22 @@
 import React, { useMemo } from 'react';
-import StepPanel from './StepPanel';
-import Loading from '../../Requests/Loading';
-import RegistrationProvider, { useRegistration } from '../lib/RegistrationProvider';
-import RegistrationMessage from './RegistrationMessage';
-import StoreProvider from '../../../lib/providers/StoreProvider';
-import messageReducer from '../reducers/messageReducer';
-import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
-import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
-import RegistrationOpeningMessage from './RegistrationOpeningMessage';
-import { hasNotPassed, hasPassed } from '../../../lib/utils/dates';
-import RegistrationNotAllowedMessage from './RegistrationNotAllowedMessage';
-import RegistrationClosingMessage from './RegistrationClosingMessage';
-import usePerpetualState from '../hooks/usePerpetualState';
-import StepConfigProvider, { useStepConfig } from '../lib/StepConfigProvider';
-import StepNavigationProvider from '../lib/StepNavigationProvider';
-import { availableSteps, registrationOverviewConfig } from '../lib/stepConfigs';
-import FormObjectProvider, { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
 import { isQualifiedForEvent } from '../../../lib/helpers/qualifications';
+import ConfirmProvider from '../../../lib/providers/ConfirmProvider';
+import StoreProvider from '../../../lib/providers/StoreProvider';
+import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
+import { hasNotPassed, hasPassed } from '../../../lib/utils/dates';
+import Loading from '../../Requests/Loading';
+import FormObjectProvider, { useFormObject } from '../../wca/FormBuilder/provider/FormObjectProvider';
+import usePerpetualState from '../hooks/usePerpetualState';
+import RegistrationProvider, { useRegistration } from '../lib/RegistrationProvider';
+import StepConfigProvider, { useStepConfig } from '../lib/StepConfigProvider';
+import { availableSteps, registrationOverviewConfig } from '../lib/stepConfigs';
+import StepNavigationProvider from '../lib/StepNavigationProvider';
+import messageReducer from '../reducers/messageReducer';
+import RegistrationClosingMessage from './RegistrationClosingMessage';
+import RegistrationMessage from './RegistrationMessage';
+import RegistrationNotAllowedMessage from './RegistrationNotAllowedMessage';
+import RegistrationOpeningMessage from './RegistrationOpeningMessage';
+import StepPanel from './StepPanel';
 
 // The following states should show the Panel even when registration is already closed.
 //   (You can think of this as "is there a non-cancelled, non-rejected registration?)

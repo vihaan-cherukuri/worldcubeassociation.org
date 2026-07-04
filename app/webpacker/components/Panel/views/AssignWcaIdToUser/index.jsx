@@ -1,15 +1,15 @@
-import React from 'react';
 import { useMutation } from '@tanstack/react-query';
+import React from 'react';
 import {
   Button, Form, Header, Message,
 } from 'semantic-ui-react';
-import Loading from '../../../Requests/Loading';
-import Errored from '../../../Requests/Errored';
+import useInputState from '../../../../lib/hooks/useInputState';
 import { useConfirm } from '../../../../lib/providers/ConfirmProvider';
 import assignWcaIdToUser from '../../../NewcomerChecks/api/assignWcaIdToUser';
-import useInputState from '../../../../lib/hooks/useInputState';
-import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
+import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
 import SEARCH_MODELS from '../../../SearchWidget/SearchModel';
+import { IdWcaSearch } from '../../../SearchWidget/WcaSearch';
 
 export default function AssignWcaIdToUser({
   user, prefilledWcaId, onSuccess, requireConfirmation,

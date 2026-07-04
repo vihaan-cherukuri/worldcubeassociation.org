@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
 import I18nHTMLTranslate from '../I18nHTMLTranslate';
 import lockupPrimary from './LogoImages/1 Positive Primary/WCA Logo Lockup.svg';
-import lockupNegative from './LogoImages/2 Negative Primary/WCA Logo Lockup.svg';
-import lockupMonoBlack from './LogoImages/3 Mono Black/WCA Logo Lockup.svg';
-import lockupMonoWhite from './LogoImages/4 Mono White/WCA Logo Lockup.svg';
 import logoOnlyPrimary from './LogoImages/1 Positive Primary/WCA Logo.svg';
+import lockupNegative from './LogoImages/2 Negative Primary/WCA Logo Lockup.svg';
 import logoOnlyNegative from './LogoImages/2 Negative Primary/WCA Logo.svg';
+import lockupMonoBlack from './LogoImages/3 Mono Black/WCA Logo Lockup.svg';
 import logoOnlyMonoBlack from './LogoImages/3 Mono Black/WCA Logo.svg';
+import lockupMonoWhite from './LogoImages/4 Mono White/WCA Logo Lockup.svg';
 import logoOnlyMonoWhite from './LogoImages/4 Mono White/WCA Logo.svg';
 
 const logoBox = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Accordion, Header } from 'semantic-ui-react';
-import RunValidatorsForm from '../../Panel/pages/RunValidatorsPage/RunValidatorsForm';
 import WCAQueryClientProvider from '../../../lib/providers/WCAQueryClientProvider';
+import RunValidatorsForm from '../../Panel/pages/RunValidatorsPage/RunValidatorsForm';
 import CompetitionResults from '../../ResultsData/Results';
 
 export default function Wrapper({ competitionId }) {

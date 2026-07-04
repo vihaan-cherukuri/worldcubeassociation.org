@@ -1,15 +1,15 @@
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import React, { useState } from 'react';
 import {
   Button, Dropdown, Message, Modal,
 } from 'semantic-ui-react';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import useInputState from '../../lib/hooks/useInputState';
 import I18n from '../../lib/i18n';
 import { ticketStakeholderConnections } from '../../lib/wca-data.js.erb';
-import joinAsBccStakeholder from './api/joinAsBccStakeholder';
-import getEligibleRolesForBcc from './api/getEligibleRolesForBcc';
-import Loading from '../Requests/Loading';
 import Errored from '../Requests/Errored';
+import Loading from '../Requests/Loading';
+import getEligibleRolesForBcc from './api/getEligibleRolesForBcc';
+import joinAsBccStakeholder from './api/joinAsBccStakeholder';
 
 // let i18n-tasks know the key is used
 // i18n-tasks-use t('tickets.stakeholder_role.actioner')

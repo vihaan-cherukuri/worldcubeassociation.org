@@ -2,16 +2,16 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 import { Button } from 'semantic-ui-react';
 
-import RoundForm from './RoundForm';
-import ScrambleInfoForm from './ScrambleInfoForm';
-import DeleteScrambleButton from './DeleteScrambleButton';
-import SaveMessage from './SaveMessage';
-import AfterActionMessage from './AfterActionMessage';
 import useSaveAction from '../../../lib/hooks/useSaveAction';
 import {
   competitionScramblesUrl,
   scrambleUrl,
 } from '../../../lib/requests/routes.js.erb';
+import AfterActionMessage from './AfterActionMessage';
+import DeleteScrambleButton from './DeleteScrambleButton';
+import RoundForm from './RoundForm';
+import SaveMessage from './SaveMessage';
+import ScrambleInfoForm from './ScrambleInfoForm';
 import './ScrambleForm.scss';
 
 const roundDataFromScramble = (scramble) => ({

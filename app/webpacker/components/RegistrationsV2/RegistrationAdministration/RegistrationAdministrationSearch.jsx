@@ -1,12 +1,12 @@
+import _ from 'lodash';
 import React, { useMemo } from 'react';
 import { Icon, Search } from 'semantic-ui-react';
-import _ from 'lodash';
-import useInputState from '../../../lib/hooks/useInputState';
-import useDebounce from '../../../lib/hooks/useDebounce';
 import { isoMoneyToHumanReadable } from '../../../lib/helpers/money';
-import { getStatusColor, getStatusIcon } from '../../../lib/utils/registrationAdmin';
-import { editRegistrationUrl } from '../../../lib/requests/routes.js.erb';
+import useDebounce from '../../../lib/hooks/useDebounce';
+import useInputState from '../../../lib/hooks/useInputState';
 import I18n from '../../../lib/i18n';
+import { editRegistrationUrl } from '../../../lib/requests/routes.js.erb';
+import { getStatusColor, getStatusIcon } from '../../../lib/utils/registrationAdmin';
 
 const MIN_SEARCH_TEXT_LEN = 2;
 

@@ -4,13 +4,13 @@ import {
   Button, Icon, Form, Message,
 } from 'semantic-ui-react';
 
-import RegionSelector from '../../wca/RegionSelector';
-import GenderSelector from '../../wca/GenderSelector';
-import { adminGenerateIds, personsUrl } from '../../../lib/requests/routes.js.erb';
-import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
-import { countries } from '../../../lib/wca-data.js.erb';
 import useInputState from '../../../lib/hooks/useInputState';
 import I18n from '../../../lib/i18n';
+import { fetchJsonOrError } from '../../../lib/requests/fetchWithAuthenticityToken';
+import { adminGenerateIds, personsUrl } from '../../../lib/requests/routes.js.erb';
+import { countries } from '../../../lib/wca-data.js.erb';
+import GenderSelector from '../../wca/GenderSelector';
+import RegionSelector from '../../wca/RegionSelector';
 
 const countryIdForIso2 = (iso2) => {
   const country = countries.byIso2[iso2];

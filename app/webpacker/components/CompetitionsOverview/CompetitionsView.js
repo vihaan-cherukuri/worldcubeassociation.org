@@ -1,7 +1,7 @@
+import { keepPreviousData, useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import React, {
   useEffect, useMemo, useReducer, useState,
 } from 'react';
-import { keepPreviousData, useInfiniteQuery, useQuery } from '@tanstack/react-query';
 import {
   Button,
   Container,
@@ -12,22 +12,22 @@ import {
   Transition,
 } from 'semantic-ui-react';
 
+import useDebounce from '../../lib/hooks/useDebounce';
 import I18n from '../../lib/i18n';
-import { apiV0Urls, WCA_API_PAGINATION } from '../../lib/requests/routes.js.erb';
 import { fetchJsonOrError } from '../../lib/requests/fetchWithAuthenticityToken';
+import { apiV0Urls, WCA_API_PAGINATION } from '../../lib/requests/routes.js.erb';
 
+import { isInProgress, isProbablyOver } from '../../lib/utils/competition-table';
 import CompetitionsFilters, { CompDisplayCheckboxes, ToggleListOrMapDisplay } from './CompetitionsFilters';
-import ListView from './ListView';
-import MapView from './MapView';
 import {
   createFilterState,
   filterReducer,
   getDisplayMode,
   updateSearchParams,
 } from './filterUtils';
+import ListView from './ListView';
+import MapView from './MapView';
 import { calculateQueryKey, createSearchParams } from './queryUtils';
-import useDebounce from '../../lib/hooks/useDebounce';
-import { isInProgress, isProbablyOver } from '../../lib/utils/competition-table';
 
 const DEBOUNCE_MS = 600;
 

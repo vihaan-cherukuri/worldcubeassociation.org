@@ -3,19 +3,19 @@ import React from 'react';
 import {
   Icon, Segment, Table,
 } from 'semantic-ui-react';
+import I18n from '../../../lib/i18n';
+import { personUrl } from '../../../lib/requests/routes.js.erb';
+import { countries } from '../../../lib/wca-data.js.erb';
+import { formatAttemptResult } from '../../../lib/wca-live/attempts';
+import Errored from '../../Requests/Errored';
+import Loading from '../../Requests/Loading';
+import EventIcon from '../../wca/EventIcon';
+import RegionFlag from '../../wca/RegionFlag';
 import {
   getPsychSheetForEvent,
 } from '../api/registration/get/get_registrations';
-import EventIcon from '../../wca/EventIcon';
-import { personUrl } from '../../../lib/requests/routes.js.erb';
-import { formatAttemptResult } from '../../../lib/wca-live/attempts';
-import I18n from '../../../lib/i18n';
-import { countries } from '../../../lib/wca-data.js.erb';
-import { getPeopleCounts, getTotals, getUserPositionInfo } from './utils';
 import PreTableInfo from './PreTableInfo';
-import Loading from '../../Requests/Loading';
-import Errored from '../../Requests/Errored';
-import RegionFlag from '../../wca/RegionFlag';
+import { getPeopleCounts, getTotals, getUserPositionInfo } from './utils';
 
 // for consistency with competitors table data, to reuse helper functions
 function mapPsychSheetDate(data) {

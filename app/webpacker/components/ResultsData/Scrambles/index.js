@@ -1,8 +1,8 @@
 import React from 'react';
-import ScrambleRowHeader from './ScrambleRowHeader';
-import ScrambleRowBody from './ScrambleRowBody';
 import { competitionEventScramblesApiUrl, newScrambleUrl } from '../../../lib/requests/routes.js.erb';
 import ViewData from '../ViewData';
+import ScrambleRowBody from './ScrambleRowBody';
+import ScrambleRowHeader from './ScrambleRowHeader';
 
 function CompetitionScrambles({ competitionId, canAdminResults }) {
   return (

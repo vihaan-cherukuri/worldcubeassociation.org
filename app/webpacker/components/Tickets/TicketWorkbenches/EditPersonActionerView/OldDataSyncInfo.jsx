@@ -1,9 +1,9 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import React, { useMemo } from 'react';
 import { Button, Message } from 'semantic-ui-react';
-import syncEditPersonRequest from '../../api/editPerson/syncEditPersonRequest';
-import Loading from '../../../Requests/Loading';
 import Errored from '../../../Requests/Errored';
+import Loading from '../../../Requests/Loading';
+import syncEditPersonRequest from '../../api/editPerson/syncEditPersonRequest';
 
 export default function OldDataSyncInfo({ ticketDetails, currentStakeholder }) {
   const {
