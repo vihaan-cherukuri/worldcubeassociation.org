@@ -1265,6 +1265,7 @@ en:
       total: "Total"
     new_registration:
       title: "Register for %{comp}"
+      add_on_the_spot: "Add on-the-spot registration"
     sign_in: "Sign in"
     profile: "profile"
     register: "Register!"
